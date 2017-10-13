@@ -1,0 +1,130 @@
+%ol.breadcrumb
+  %li.breadcrumb-item
+    = link_to 'Factions', factions_path
+  - if @rat.faction && @rat.group.faction
+    %li.breadcrumb-item
+      = link_to @rat.faction.name, faction_path(id: @rat.faction_id)
+    %li.breadcrumb-item
+      = link_to @rat.group.name, group_path(faction_id: @rat.faction_id, group_id: @rat.group_id)
+  - else
+    %li.breadcrumb-item
+      = link_to 'Generic Groups', generic_groups_path
+    %li.breadcrumb-item
+      = link_to @rat.group.name, generic_group_path(group_id: @rat.group_id)
+  %li.breadcrumb-item.active= @rat.name
+.panel.panel-default
+  .panel-body
+    .row
+      .col-sm-12
+        %table.table.table-condensed
+          %caption Description
+          %tr
+            %td= @rat.description.html_safe
+    .row
+      .col-sm-3
+        %table.table.table-condensed
+          %caption Image & Faction
+          %tr
+            %td{ rowspan: 2 }
+              = type_image(@rat.id, 64, highligh_ded_boss: false)
+              = faction_image(@rat.faction_id, 64)
+              = ded_site?(@rat.ded_site)
+        %table.table.table-condensed
+          %caption Bounty
+          %tr
+            %td
+              = icon_tag('isk')
+              = entity_kill_bounty
+      .col-sm-9
+        %table.table.table-condensed
+          %caption Defense
+          %tr
+            %th HP
+            %th Repair
+            %td= damage_type(:kinetic, :resist)
+            %td= damage_type(:thermal, :resist)
+            %td= damage_type(:explosive, :resist)
+            %td= damage_type(:em, :resist)
+          %tr
+            %td.col-sm-2= shield_capacity
+            %td.col-sm-2= repair(:shield_boost)
+            %td.col-sm-1= resistance_value(:kinetic ,:shield)
+            %td.col-sm-1= resistance_value(:thermal ,:shield)
+            %td.col-sm-1= resistance_value(:explosive ,:shield)
+            %td.col-sm-1= resistance_value(:em ,:shield)
+          %tr
+            %td= armor_hp
+            %td= repair(:armor_repair)
+            %td= resistance_value(:kinetic, :armor)
+            %td= resistance_value(:thermal, :armor)
+            %td= resistance_value(:explosive, :armor)
+            %td= resistance_value(:em, :armor)
+          %tr
+            %td{ colspan: 6 }= hp
+    .row
+      .col-sm-6
+        %table.table.table-condensed
+          %caption Navigation & Targeting
+          %tr
+            %td.col-sm-3= icon_tag('ab', 'Cruise Speed') + entity_cruise_speed
+            %td.col-sm-3= icon_tag('mwd', 'Max Speed') + max_velocity
+            %td.col-sm-3= icon_tag('orbit', 'Orbit Range') + entity_fly_range
+            %td.col-sm-3= icon_tag('range', 'Max Range') + max_range
+          %tr
+            %td= icon_tag('sig', 'Signature Radius') + signature_radius
+            %td= icon_tag('sig', 'Prefered Target Signature Radius') + optimal_sig_radius
+            %td= icon_tag('target', 'Max Locked Targets') + max_locked_targets
+            %td= icon_tag('target', 'Max Targets') + max_attack_targets
+          %tr
+            %td{ colspan: 4}= icon_tag('drones', 'Ignore Drones Below This Size') + ai_ignore_drones_below_signature_radius
+        
+      .col-sm-6
+        %table.table.table-condensed
+          %caption Offense
+          %tr
+            %th DPS
+            %td= damage_type(:kinetic, :damage)
+            %td= damage_type(:thermal, :damage)
+            %td= damage_type(:explosive, :damage)
+            %td= damage_type(:em, :damage)
+          %tr
+            %td.col-sm-1= total_turret_damage
+            %td.col-sm-1= turret_damage(:kinetic)
+            %td.col-sm-1= turret_damage(:thermal)
+            %td.col-sm-1= turret_damage(:explosive)
+            %td.col-sm-1= turret_damage(:em)
+          %tr
+            %td= total_missile_damage
+            %td= missile_damage(:kinetic)
+            %td= missile_damage(:thermal)
+            %td= missile_damage(:explosive)
+            %td= missile_damage(:em)
+    .row
+      .col-sm-12
+        %table.table.table-condensed
+          %caption EWAR
+          %tr
+            %td
+              = scram
+              = web
+              = neut
+              = ecm
+    - unless @rat.loot.empty?
+      .row
+        .col-sm-12
+          %table.table.table-condensed
+            %caption 
+              Loot
+            %tr
+              %th
+              %th Item Name
+              %th.numeric Average Price
+            - @rat.loot.sort_by { |l| l.name }.each do |item|
+              %tr
+                %td= type_image(item.id)
+                %td= item.name
+                %td.numeric= item.price ? number_with_precision(item.price, precision: 2, delimiter: ',') + ' ISK' : '-'
+        
+    .row
+      .col-sm-12
+        = link_to 'More Details', rats_details_path(@rat), class: 'btn btn-primary'

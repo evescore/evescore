@@ -1,0 +1,26 @@
+%ol.breadcrumb
+  %li.breadcrumb-item
+    = link_to 'Factions', factions_path
+  %li.breadcrumb-item.active= @faction.name
+
+.panel.panel-default
+  .panel-body
+    .row
+      %div{ class: @faction.ded_sites.empty? ? 'col-sm-12' : 'col-sm-6' }
+        %table.table.table-condensed
+          %caption Rat Groups
+          - @groups.each do |group|
+            %tr
+              %td
+                = link_to group.name, group_path(group_id: group.id, faction_id: @faction.id)
+
+      - unless @faction.ded_sites.empty? 
+        .col-sm-6
+          %table.table.table-condensed
+            %caption DED Sites Bosses
+            - @faction.ded_sites.each do |ded|
+              - ded.bosses.each do |boss|
+                %tr
+                  %td= link_to boss.name, rats_path(boss.id)
+                  %td.numeric= ded_site?(ded)
+              

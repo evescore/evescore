@@ -1,0 +1,21 @@
+%table.table.table-striped
+  %caption
+    Ticks Journal
+  %thead
+    %tr
+      %th.icon
+      %th.timestamp Timestamp
+      %th.details Details
+      %th
+      %th.numeric Amount
+  %tbody
+    - @ticks.each do |record|
+      %tr
+        %td= record_icon(record)
+        %td= record.ts
+        %td= record_details(record)
+        %td
+          - record.kills.each do |kill|
+            = kill_image(kill)
+        %td.numeric= number_to_isk record.amount
+= paginate @ticks

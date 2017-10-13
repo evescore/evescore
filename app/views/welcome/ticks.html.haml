@@ -1,0 +1,14 @@
+%table.table.table-striped
+  %caption Top Ticks
+  %thead
+    %tr
+      %th.icon
+      %th Character
+      %th.numeric Amount
+  %tbody
+    - @top_ticks.each do |record|
+      %tr
+        %td.icon= character_image(record['character_id'], 32)
+        %td= Character.find(record['character_id']).name
+        %td.numeric= number_to_isk record['amount']
+= paginate @top_ticks

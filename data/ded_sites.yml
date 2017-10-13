@@ -1,0 +1,71 @@
+---
+- :id: 59f1efdc85db9e36e8650068
+  :name: The Maze
+  :level: 10/10
+  :boss_ids_array:
+  - 25528
+  :faction_id: 500010
+- :id: 59f1eff485db9e36e8650069
+  :name: Pith Penal Complex
+  :level: 8/10
+  :boss_ids_array:
+  - 19592
+  :faction_id: 500010
+- :id: 5aba2660be8a5c79c0414ea0
+  :name: Guristas Troop Reinvigoration Camp
+  :level: 6/10
+  :boss_ids_array:
+  - 18645
+  :faction_id: 500010
+- :id: 5aba298dbe8a5c79c0414ea1
+  :name: Gurista Military Operations Complex
+  :level: 7/10
+  :boss_ids_array:
+  - 3821
+  :faction_id: 500010
+- :id: 5aba5086be8a5c080b187831
+  :name: Serpentis Fleet Shipyard
+  :level: 10/10
+  :boss_ids_array:
+  - 18630
+  :faction_id: 500020
+- :id: 5aba59a3be8a5c1339555279
+  :name: Serpentis Prison Camp
+  :level: 8/10
+  :boss_ids_array:
+  - 3809
+  :faction_id: 500020
+- :id: 5aba5da3be8a5c224b3aa409
+  :name: Serpentis Paramilitary Complex
+  :level: 7/10
+  :boss_ids_array:
+  - 3827
+  :faction_id: 500020
+- :id: 5aba5e13be8a5c224b3aa40a
+  :name: Serpentis Corporation Hydroponics Site
+  :level: 5/10
+  :boss_ids_array:
+  - 3890
+  :faction_id: 500020
+- :id: 5aba5e8fbe8a5c224b3aa40b
+  :name: Serpentis Phi-Outpost
+  :level: 4/10
+  :boss_ids_array:
+  - 17412
+  :faction_id: 500020
+- :id: 5aba5ec3be8a5c224b3aa40c
+  :name: Serpentis Narcotic Warehouses
+  :level: 3/10
+  :boss_ids_array:
+  - 17818
+  :faction_id: 500020
+- :id: 5aba62cdbe8a5c224b3aa40d
+  :name: Serpentis Live Cargo Distribution Facilities
+  :level: 2/10
+  :boss_ids_array: 
+  :faction_id: 500020
+- :id: 5aba638fbe8a5c224b3aa40e
+  :name: Serpentis Drug Outlet
+  :level: 1/10
+  :boss_ids_array: 
+  :faction_id: 500020

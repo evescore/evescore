@@ -1,0 +1,53 @@
+---
+- :id: 500001
+  :corporation_id: 1000035
+  :name: Caldari State
+  :pattern: !ruby/regexp /Caldari/i
+- :id: 500002
+  :corporation_id: 1000051
+  :name: Minmatar Republic
+  :pattern: !ruby/regexp /Minmatar/i
+- :id: 500003
+  :corporation_id: 1000084
+  :name: Amarr Empire
+  :pattern: !ruby/regexp /Amarr/i
+- :id: 500004
+  :corporation_id: 1000120
+  :name: Gallente Federation
+  :pattern: !ruby/regexp /(?!gallenteinfested)gallente/i
+- :id: 500006
+  :corporation_id: 1000137
+  :name: CONCORD Assembly
+  :pattern: !ruby/regexp /CONCORD/i
+- :id: 500008
+  :corporation_id: 1000156
+  :name: Khanid Kingdom
+  :pattern: !ruby/regexp /Khanid/i
+- :id: 500010
+  :corporation_id: 1000127
+  :name: Guristas Pirates
+  :pattern: !ruby/regexp /Guristas/i
+- :id: 500011
+  :corporation_id: 1000138
+  :name: Angel Cartel
+  :pattern: !ruby/regexp /Angel/i
+- :id: 500012
+  :corporation_id: 1000134
+  :name: Blood Raider Covenant
+  :pattern: !ruby/regexp /Blood/i
+- :id: 500015
+  :corporation_id: 1000163
+  :name: Thukker Tribe
+  :pattern: !ruby/regexp /Thukker/i
+- :id: 500018
+  :corporation_id: 1000128
+  :name: Mordu's Legion Command
+  :pattern: !ruby/regexp /mordu/i
+- :id: 500019
+  :corporation_id: 1000162
+  :name: Sansha's Nation
+  :pattern: !ruby/regexp /Sansha/i
+- :id: 500020
+  :corporation_id: 1000135
+  :name: Serpentis
+  :pattern: !ruby/regexp /(?-mix:Serpentis)|(?-mix:Shadow)/

@@ -1,0 +1,22 @@
+%table.table.table-striped
+  %caption Top Rats Bounty
+  %thead
+    %tr
+      %th.icon
+      %th Rat Name
+      %th Group
+      %th.numeric Kills
+      %th.numeric{:colspan => "2"} Bounty
+  %tbody
+    - @valuable_rats.each do |record|
+      %tr
+        %td= kill_image(record)
+        %td= record['name']
+        %td= record['group']
+        %td.numeric
+          = number_with_delimiter record['amount']
+        %td.numeric
+          = number_to_isk record['bounty']
+        %td.numeric
+          ( #{number_to_isk_short record['bounty']} )
+= paginate @valuable_rats

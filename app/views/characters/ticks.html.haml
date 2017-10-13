@@ -1,0 +1,14 @@
+%table.table.table-striped
+  %caption Top Ticks
+  %thead
+    %tr
+      %th.icon
+      %th Timestamp
+      %th.numeric Amount
+  %tbody
+    - @top_ticks.each do |record|
+      %tr
+        %td= record_icon(record)
+        %td= record.ts
+        %td.numeric= number_to_isk record.amount
+= paginate @top_ticks

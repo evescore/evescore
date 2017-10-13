@@ -1,0 +1,25 @@
+language: ruby
+rvm:
+  - 2.4
+env:
+  global:
+    - CC_TEST_REPORTER_ID=33a9a6da397de70d54b40e262d798900b1b4ae8c8d3e8ef10e509269fe73506c
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  - npm install -g yarn@1.5.1
+  - bundle exec rake yarn:install
+  - bundle exec rake import:dogma_attribute_types
+  - bundle exec rake import:groups
+script:
+  - bundle exec rake
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+services:
+  - mongodb
+cache:
+  bundler: true
+  directories:
+    - node_modules
+  yarn: true

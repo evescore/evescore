@@ -1,0 +1,113 @@
+//= require bootstrap-select
+
+.tooltip-inner {
+  max-width: 350px;
+}
+
+th.icon {
+  width: 49px;
+}
+
+th.timestamp {
+  width: 187px;
+}
+
+th.details {
+  width: 139px;
+}
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+.label-purple {
+  background-color: #8e10fc;
+}
+
+.navbar-brand > img {
+  margin-top: -11px;
+  margin-left: -11px;
+}
+
+.navbar img.portrait {
+  margin: -7px;
+}
+
+body {
+  background: #000 image-url("fp-bg2") no-repeat 50% 0;
+  background-size: cover;
+  padding-top: 40px;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle
+}
+
+th.numeric, td.numeric {
+  text-align: right;
+}
+
+.tt-menu,
+.gist {
+  text-align: left;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {
+  width: 300px;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #3a3f44;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  text-shadow: none;
+  color: #fff;
+  padding: 3px 20px;
+  line-height: 24px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #7a8288;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #7a8288;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.gist {
+  font-size: 14px;
+}

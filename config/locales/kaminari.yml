@@ -1,0 +1,7 @@
+en:
+  views:
+    pagination:
+      next: ›
+      last: »
+      previous: ‹
+      first: «

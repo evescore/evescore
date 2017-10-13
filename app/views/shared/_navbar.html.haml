@@ -1,0 +1,25 @@
+%nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"}
+        = image_tag 'evescore.png'
+    %ul.nav.navbar-nav.navbar-right
+      %li.navbar-form
+        .form-group
+          %input{type: :text, class: 'form-control typeahead', id: 'search', placeholder: 'Search', autocomplete: 'off'}
+      - if current_user
+        - current_user.characters.each do |character|
+          %li= link_to navbar_portrait(character), character_profile_path(character)      
+        %li
+          = link_to icon('user'), characters_path
+        %li
+          = link_to icon('log-out'), destroy_user_session_path, method: :delete
+      - else
+        %li
+          = link_to icon('log-in'), new_user_session_path
+

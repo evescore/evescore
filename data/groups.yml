@@ -1,0 +1,997 @@
+---
+- :id: 99
+  :faction_id: 
+  :name: Sentry Gun
+- :id: 180
+  :faction_id: 
+  :name: Protective Sentry Gun
+- :id: 182
+  :faction_id: 
+  :name: Police Drone
+- :id: 185
+  :faction_id: 
+  :name: Pirate Drone
+- :id: 279
+  :faction_id: 
+  :name: LCO Drone
+- :id: 286
+  :faction_id: 
+  :name: Minor Threat
+- :id: 287
+  :faction_id: 
+  :name: Rogue Drone
+- :id: 288
+  :faction_id: 
+  :name: Faction Drone
+- :id: 297
+  :faction_id: 
+  :name: Convoy
+- :id: 298
+  :faction_id: 
+  :name: Convoy Drone
+- :id: 301
+  :faction_id: 500006
+  :name: Concord Drone
+- :id: 306
+  :faction_id: 
+  :name: Spawn Container
+- :id: 319
+  :faction_id: 
+  :name: Large Collidable Structure
+- :id: 323
+  :faction_id: 
+  :name: Billboard
+- :id: 335
+  :faction_id: 
+  :name: Temporary Cloud
+- :id: 337
+  :faction_id: 
+  :name: Mission Drone
+- :id: 383
+  :faction_id: 
+  :name: Destructible Sentry Gun
+- :id: 435
+  :faction_id: 
+  :name: Deadspace Overseer
+- :id: 446
+  :faction_id: 
+  :name: Customs Official
+- :id: 494
+  :faction_id: 
+  :name: Deadspace Overseer's Structure
+- :id: 495
+  :faction_id: 
+  :name: Deadspace Overseer's Sentry
+- :id: 496
+  :faction_id: 
+  :name: Deadspace Overseer's Belongings
+- :id: 520
+  :faction_id: 
+  :name: Storyline Frigate
+- :id: 522
+  :faction_id: 
+  :name: Storyline Cruiser
+- :id: 523
+  :faction_id: 
+  :name: Storyline Battleship
+- :id: 527
+  :faction_id: 
+  :name: Storyline Mission Frigate
+- :id: 533
+  :faction_id: 
+  :name: Storyline Mission Cruiser
+- :id: 534
+  :faction_id: 
+  :name: Storyline Mission Battleship
+- :id: 550
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Frigate
+- :id: 551
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Cruiser
+- :id: 552
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Battleship
+- :id: 553
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Officer
+- :id: 554
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Hauler
+- :id: 555
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Cruiser
+- :id: 556
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Battleship
+- :id: 557
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Frigate
+- :id: 558
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Hauler
+- :id: 559
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Officer
+- :id: 560
+  :faction_id: 500010
+  :name: Asteroid Guristas Battleship
+- :id: 561
+  :faction_id: 500010
+  :name: Asteroid Guristas Cruiser
+- :id: 562
+  :faction_id: 500010
+  :name: Asteroid Guristas Frigate
+- :id: 563
+  :faction_id: 500010
+  :name: Asteroid Guristas Hauler
+- :id: 564
+  :faction_id: 500010
+  :name: Asteroid Guristas Officer
+- :id: 565
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Battleship
+- :id: 566
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Cruiser
+- :id: 567
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Frigate
+- :id: 568
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Hauler
+- :id: 569
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Officer
+- :id: 570
+  :faction_id: 500020
+  :name: Asteroid Serpentis Battleship
+- :id: 571
+  :faction_id: 500020
+  :name: Asteroid Serpentis Cruiser
+- :id: 572
+  :faction_id: 500020
+  :name: Asteroid Serpentis Frigate
+- :id: 573
+  :faction_id: 500020
+  :name: Asteroid Serpentis Hauler
+- :id: 574
+  :faction_id: 500020
+  :name: Asteroid Serpentis Officer
+- :id: 575
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Destroyer
+- :id: 576
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel BattleCruiser
+- :id: 577
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Destroyer
+- :id: 578
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders BattleCruiser
+- :id: 579
+  :faction_id: 500010
+  :name: Asteroid Guristas Destroyer
+- :id: 580
+  :faction_id: 500010
+  :name: Asteroid Guristas BattleCruiser
+- :id: 581
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Destroyer
+- :id: 582
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation BattleCruiser
+- :id: 583
+  :faction_id: 500020
+  :name: Asteroid Serpentis Destroyer
+- :id: 584
+  :faction_id: 500020
+  :name: Asteroid Serpentis BattleCruiser
+- :id: 593
+  :faction_id: 500011
+  :name: Deadspace Angel Cartel BattleCruiser
+- :id: 594
+  :faction_id: 500011
+  :name: Deadspace Angel Cartel Battleship
+- :id: 595
+  :faction_id: 500011
+  :name: Deadspace Angel Cartel Cruiser
+- :id: 596
+  :faction_id: 500011
+  :name: Deadspace Angel Cartel Destroyer
+- :id: 597
+  :faction_id: 500011
+  :name: Deadspace Angel Cartel Frigate
+- :id: 602
+  :faction_id: 500012
+  :name: Deadspace Blood Raiders BattleCruiser
+- :id: 603
+  :faction_id: 500012
+  :name: Deadspace Blood Raiders Battleship
+- :id: 604
+  :faction_id: 500012
+  :name: Deadspace Blood Raiders Cruiser
+- :id: 605
+  :faction_id: 500012
+  :name: Deadspace Blood Raiders Destroyer
+- :id: 606
+  :faction_id: 500012
+  :name: Deadspace Blood Raiders Frigate
+- :id: 611
+  :faction_id: 500010
+  :name: Deadspace Guristas BattleCruiser
+- :id: 612
+  :faction_id: 500010
+  :name: Deadspace Guristas Battleship
+- :id: 613
+  :faction_id: 500010
+  :name: Deadspace Guristas Cruiser
+- :id: 614
+  :faction_id: 500010
+  :name: Deadspace Guristas Destroyer
+- :id: 615
+  :faction_id: 500010
+  :name: Deadspace Guristas Frigate
+- :id: 620
+  :faction_id: 500019
+  :name: Deadspace Sansha's Nation BattleCruiser
+- :id: 621
+  :faction_id: 500019
+  :name: Deadspace Sansha's Nation Battleship
+- :id: 622
+  :faction_id: 500019
+  :name: Deadspace Sansha's Nation Cruiser
+- :id: 623
+  :faction_id: 500019
+  :name: Deadspace Sansha's Nation Destroyer
+- :id: 624
+  :faction_id: 500019
+  :name: Deadspace Sansha's Nation Frigate
+- :id: 629
+  :faction_id: 500020
+  :name: Deadspace Serpentis BattleCruiser
+- :id: 630
+  :faction_id: 500020
+  :name: Deadspace Serpentis Battleship
+- :id: 631
+  :faction_id: 500020
+  :name: Deadspace Serpentis Cruiser
+- :id: 632
+  :faction_id: 500020
+  :name: Deadspace Serpentis Destroyer
+- :id: 633
+  :faction_id: 500020
+  :name: Deadspace Serpentis Frigate
+- :id: 665
+  :faction_id: 500003
+  :name: Mission Amarr Empire Frigate
+- :id: 666
+  :faction_id: 500003
+  :name: Mission Amarr Empire Battlecruiser
+- :id: 667
+  :faction_id: 500003
+  :name: Mission Amarr Empire Battleship
+- :id: 668
+  :faction_id: 500003
+  :name: Mission Amarr Empire Cruiser
+- :id: 669
+  :faction_id: 500003
+  :name: Mission Amarr Empire Destroyer
+- :id: 670
+  :faction_id: 500003
+  :name: Mission Amarr Empire Other
+- :id: 671
+  :faction_id: 500001
+  :name: Mission Caldari State Frigate
+- :id: 672
+  :faction_id: 500001
+  :name: Mission Caldari State Battlecruiser
+- :id: 673
+  :faction_id: 500001
+  :name: Mission Caldari State Cruiser
+- :id: 674
+  :faction_id: 500001
+  :name: Mission Caldari State Battleship
+- :id: 675
+  :faction_id: 500001
+  :name: Mission Caldari State Other
+- :id: 676
+  :faction_id: 500001
+  :name: Mission Caldari State Destroyer
+- :id: 677
+  :faction_id: 500004
+  :name: Mission Gallente Federation Frigate
+- :id: 678
+  :faction_id: 500004
+  :name: Mission Gallente Federation Cruiser
+- :id: 679
+  :faction_id: 500004
+  :name: Mission Gallente Federation Destroyer
+- :id: 680
+  :faction_id: 500004
+  :name: Mission Gallente Federation Battleship
+- :id: 681
+  :faction_id: 500004
+  :name: Mission Gallente Federation Battlecruiser
+- :id: 682
+  :faction_id: 500004
+  :name: Mission Gallente Federation Other
+- :id: 683
+  :faction_id: 500002
+  :name: Mission Minmatar Republic Frigate
+- :id: 684
+  :faction_id: 500002
+  :name: Mission Minmatar Republic Destroyer
+- :id: 685
+  :faction_id: 500002
+  :name: Mission Minmatar Republic Battlecruiser
+- :id: 686
+  :faction_id: 500002
+  :name: Mission Minmatar Republic Other
+- :id: 687
+  :faction_id: 500008
+  :name: Mission Khanid Frigate
+- :id: 688
+  :faction_id: 500008
+  :name: Mission Khanid Destroyer
+- :id: 689
+  :faction_id: 500008
+  :name: Mission Khanid Cruiser
+- :id: 690
+  :faction_id: 500008
+  :name: Mission Khanid Battlecruiser
+- :id: 691
+  :faction_id: 500008
+  :name: Mission Khanid Battleship
+- :id: 692
+  :faction_id: 500008
+  :name: Mission Khanid Other
+- :id: 693
+  :faction_id: 500006
+  :name: Mission CONCORD Frigate
+- :id: 694
+  :faction_id: 500006
+  :name: Mission CONCORD Destroyer
+- :id: 695
+  :faction_id: 500006
+  :name: Mission CONCORD Cruiser
+- :id: 696
+  :faction_id: 500006
+  :name: Mission CONCORD Battlecruiser
+- :id: 697
+  :faction_id: 500006
+  :name: Mission CONCORD Battleship
+- :id: 698
+  :faction_id: 500006
+  :name: Mission CONCORD Other
+- :id: 699
+  :faction_id: 500018
+  :name: Mission Mordu Frigate
+- :id: 700
+  :faction_id: 500018
+  :name: Mission Mordu Destroyer
+- :id: 701
+  :faction_id: 500018
+  :name: Mission Mordu Cruiser
+- :id: 702
+  :faction_id: 500018
+  :name: Mission Mordu Battlecruiser
+- :id: 703
+  :faction_id: 500018
+  :name: Mission Mordu Battleship
+- :id: 704
+  :faction_id: 500018
+  :name: Mission Mordu Other
+- :id: 705
+  :faction_id: 500002
+  :name: Mission Minmatar Republic Cruiser
+- :id: 706
+  :faction_id: 500002
+  :name: Mission Minmatar Republic Battleship
+- :id: 715
+  :faction_id: 
+  :name: Destructible Agents In Space
+- :id: 755
+  :faction_id: 
+  :name: Asteroid Rogue Drone BattleCruiser
+- :id: 756
+  :faction_id: 
+  :name: Asteroid Rogue Drone Battleship
+- :id: 757
+  :faction_id: 
+  :name: Asteroid Rogue Drone Cruiser
+- :id: 758
+  :faction_id: 
+  :name: Asteroid Rogue Drone Destroyer
+- :id: 759
+  :faction_id: 
+  :name: Asteroid Rogue Drone Frigate
+- :id: 760
+  :faction_id: 
+  :name: Asteroid Rogue Drone Hauler
+- :id: 761
+  :faction_id: 
+  :name: Asteroid Rogue Drone Swarm
+- :id: 784
+  :faction_id: 
+  :name: Large Collidable Ship
+- :id: 789
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Commander Frigate
+- :id: 790
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Commander Cruiser
+- :id: 791
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Commander Cruiser
+- :id: 792
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Commander Frigate
+- :id: 793
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Commander BattleCruiser
+- :id: 794
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Commander Destroyer
+- :id: 795
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Commander BattleCruiser
+- :id: 796
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Commander Destroyer
+- :id: 797
+  :faction_id: 500010
+  :name: Asteroid Guristas Commander BattleCruiser
+- :id: 798
+  :faction_id: 500010
+  :name: Asteroid Guristas Commander Cruiser
+- :id: 799
+  :faction_id: 500010
+  :name: Asteroid Guristas Commander Destroyer
+- :id: 800
+  :faction_id: 500010
+  :name: Asteroid Guristas Commander Frigate
+- :id: 801
+  :faction_id: 
+  :name: Deadspace Rogue Drone BattleCruiser
+- :id: 802
+  :faction_id: 
+  :name: Deadspace Rogue Drone Battleship
+- :id: 803
+  :faction_id: 
+  :name: Deadspace Rogue Drone Cruiser
+- :id: 804
+  :faction_id: 
+  :name: Deadspace Rogue Drone Destroyer
+- :id: 805
+  :faction_id: 
+  :name: Deadspace Rogue Drone Frigate
+- :id: 806
+  :faction_id: 
+  :name: Deadspace Rogue Drone Swarm
+- :id: 807
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Commander BattleCruiser
+- :id: 808
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Commander Cruiser
+- :id: 809
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Commander Destroyer
+- :id: 810
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Commander Frigate
+- :id: 811
+  :faction_id: 500020
+  :name: Asteroid Serpentis Commander BattleCruiser
+- :id: 812
+  :faction_id: 500020
+  :name: Asteroid Serpentis Commander Cruiser
+- :id: 813
+  :faction_id: 500020
+  :name: Asteroid Serpentis Commander Destroyer
+- :id: 814
+  :faction_id: 500020
+  :name: Asteroid Serpentis Commander Frigate
+- :id: 816
+  :faction_id: 
+  :name: Mission Generic Battleships
+- :id: 817
+  :faction_id: 
+  :name: Mission Generic Cruisers
+- :id: 818
+  :faction_id: 
+  :name: Mission Generic Frigates
+- :id: 819
+  :faction_id: 
+  :name: Deadspace Overseer Frigate
+- :id: 820
+  :faction_id: 
+  :name: Deadspace Overseer Cruiser
+- :id: 821
+  :faction_id: 
+  :name: Deadspace Overseer Battleship
+- :id: 822
+  :faction_id: 500015
+  :name: Mission Thukker Battlecruiser
+- :id: 823
+  :faction_id: 500015
+  :name: Mission Thukker Battleship
+- :id: 824
+  :faction_id: 500015
+  :name: Mission Thukker Cruiser
+- :id: 825
+  :faction_id: 500015
+  :name: Mission Thukker Destroyer
+- :id: 826
+  :faction_id: 500015
+  :name: Mission Thukker Frigate
+- :id: 827
+  :faction_id: 500015
+  :name: Mission Thukker Other
+- :id: 828
+  :faction_id: 
+  :name: Mission Generic Battle Cruisers
+- :id: 829
+  :faction_id: 
+  :name: Mission Generic Destroyers
+- :id: 843
+  :faction_id: 
+  :name: Asteroid Rogue Drone Commander BattleCruiser
+- :id: 844
+  :faction_id: 
+  :name: Asteroid Rogue Drone Commander Battleship
+- :id: 845
+  :faction_id: 
+  :name: Asteroid Rogue Drone Commander Cruiser
+- :id: 846
+  :faction_id: 
+  :name: Asteroid Rogue Drone Commander Destroyer
+- :id: 847
+  :faction_id: 
+  :name: Asteroid Rogue Drone Commander Frigate
+- :id: 848
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Commander Battleship
+- :id: 849
+  :faction_id: 500012
+  :name: Asteroid Blood Raiders Commander Battleship
+- :id: 850
+  :faction_id: 500010
+  :name: Asteroid Guristas Commander Battleship
+- :id: 851
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Commander Battleship
+- :id: 852
+  :faction_id: 500020
+  :name: Asteroid Serpentis Commander Battleship
+- :id: 861
+  :faction_id: 
+  :name: Mission Fighter Drone
+- :id: 865
+  :faction_id: 500003
+  :name: Mission Amarr Empire Carrier
+- :id: 866
+  :faction_id: 500001
+  :name: Mission Caldari State Carrier
+- :id: 867
+  :faction_id: 500004
+  :name: Mission Gallente Federation Carrier
+- :id: 868
+  :faction_id: 500002
+  :name: Mission Minmatar Republic Carrier
+- :id: 875
+  :faction_id: 
+  :name: Mission Faction Transports
+- :id: 922
+  :faction_id: 
+  :name: Capture Point
+- :id: 924
+  :faction_id: 
+  :name: Mission Faction Battleship
+- :id: 925
+  :faction_id: 
+  :name: FW Infrastructure Hub
+- :id: 927
+  :faction_id: 
+  :name: Mission Faction Industrials
+- :id: 934
+  :faction_id: 
+  :name: Zombie Entities
+- :id: 952
+  :faction_id: 
+  :name: Mission Container
+- :id: 959
+  :faction_id: 
+  :name: Deadspace Sleeper Sleepless Sentinel
+- :id: 960
+  :faction_id: 
+  :name: Deadspace Sleeper Awakened Sentinel
+- :id: 961
+  :faction_id: 
+  :name: Deadspace Sleeper Emergent Sentinel
+- :id: 982
+  :faction_id: 
+  :name: Deadspace Sleeper Sleepless Defender
+- :id: 983
+  :faction_id: 
+  :name: Deadspace Sleeper Sleepless Patroller
+- :id: 984
+  :faction_id: 
+  :name: Deadspace Sleeper Awakened Defender
+- :id: 985
+  :faction_id: 
+  :name: Deadspace Sleeper Awakened Patroller
+- :id: 986
+  :faction_id: 
+  :name: Deadspace Sleeper Emergent Defender
+- :id: 987
+  :faction_id: 
+  :name: Deadspace Sleeper Emergent Patroller
+- :id: 1006
+  :faction_id: 
+  :name: Mission Faction Cruiser
+- :id: 1007
+  :faction_id: 
+  :name: Mission Faction Frigate
+- :id: 1051
+  :faction_id: 500019
+  :name: Incursion Sansha's Nation Industrial
+- :id: 1052
+  :faction_id: 500019
+  :name: Incursion Sansha's Nation Capital
+- :id: 1053
+  :faction_id: 500019
+  :name: Incursion Sansha's Nation Frigate
+- :id: 1054
+  :faction_id: 500019
+  :name: Incursion Sansha's Nation Cruiser
+- :id: 1056
+  :faction_id: 500019
+  :name: Incursion Sansha's Nation Battleship
+- :id: 1166
+  :faction_id: 500002
+  :name: FW Minmatar Republic Frigate
+- :id: 1167
+  :faction_id: 500001
+  :name: FW Caldari State Frigate
+- :id: 1168
+  :faction_id: 500004
+  :name: FW Gallente Federation Frigate
+- :id: 1169
+  :faction_id: 500003
+  :name: FW Amarr Empire Frigate
+- :id: 1174
+  :faction_id: 
+  :name: Asteroid Rogue Drone Officer
+- :id: 1175
+  :faction_id: 500003
+  :name: FW Amarr Empire Destroyer
+- :id: 1176
+  :faction_id: 500001
+  :name: FW Caldari State Destroyer
+- :id: 1177
+  :faction_id: 500004
+  :name: FW Gallente Federation Destroyer
+- :id: 1178
+  :faction_id: 500002
+  :name: FW Minmatar Republic Destroyer
+- :id: 1179
+  :faction_id: 500003
+  :name: FW Amarr Empire Cruiser
+- :id: 1180
+  :faction_id: 500001
+  :name: FW Caldari State Cruiser
+- :id: 1181
+  :faction_id: 500004
+  :name: FW Gallente Federation Cruiser
+- :id: 1182
+  :faction_id: 500002
+  :name: FW Minmatar Republic Cruiser
+- :id: 1183
+  :faction_id: 500003
+  :name: FW Amarr Empire Battlecruiser
+- :id: 1184
+  :faction_id: 500001
+  :name: FW Caldari State Battlecruiser
+- :id: 1185
+  :faction_id: 500004
+  :name: FW Gallente Federation Battlecruiser
+- :id: 1186
+  :faction_id: 500002
+  :name: FW Minmatar Republic Battlecruiser
+- :id: 1207
+  :faction_id: 
+  :name: Scatter Container
+- :id: 1252
+  :faction_id: 500011
+  :name: Ghost Sites Angel Cartel Cruiser
+- :id: 1255
+  :faction_id: 500012
+  :name: Ghost Sites Blood Raiders Cruiser
+- :id: 1259
+  :faction_id: 500010
+  :name: Ghost Sites Guristas Cruiser
+- :id: 1262
+  :faction_id: 500020
+  :name: Ghost Sites Serpentis Cruiser
+- :id: 1265
+  :faction_id: 500019
+  :name: Ghost Sites Sanshas Cruiser
+- :id: 1285
+  :faction_id: 500018
+  :name: Asteroid Mordus Legion Commander Frigate
+- :id: 1286
+  :faction_id: 500018
+  :name: Asteroid Mordus Legion Commander Cruiser
+- :id: 1287
+  :faction_id: 500018
+  :name: Asteroid Mordus Legion Commander Battleship
+- :id: 1288
+  :faction_id: 500018
+  :name: Ghost Sites Mordu's Legion
+- :id: 1307
+  :faction_id: 
+  :name: Roaming Sleepers Cruiser
+- :id: 1310
+  :faction_id: 
+  :name: Drifter Battleship
+- :id: 1402
+  :faction_id: 500003
+  :name: Amarr Navy Roaming Battleship
+- :id: 1411
+  :faction_id: 500003
+  :name: Amarr Navy Roaming Cruiser
+- :id: 1412
+  :faction_id: 500003
+  :name: Amarr Navy Roaming Capital
+- :id: 1413
+  :faction_id: 500003
+  :name: Amarr Navy Roaming Logistics
+- :id: 1414
+  :faction_id: 500003
+  :name: Amarr Navy Roaming Frigate
+- :id: 1452
+  :faction_id: 
+  :name: Irregular Drone
+- :id: 1453
+  :faction_id: 
+  :name: Irregular EW Drone
+- :id: 1454
+  :faction_id: 
+  :name: Irregular Fighter
+- :id: 1455
+  :faction_id: 
+  :name: Irregular Fighter Squadron
+- :id: 1465
+  :faction_id: 
+  :name: Mission Generic Supercarrier
+- :id: 1529
+  :faction_id: 
+  :name: Deadspace Sleeper Upgraded Avenger
+- :id: 1530
+  :faction_id: 
+  :name: Drifter Response Battleship
+- :id: 1566
+  :faction_id: 
+  :name: Irregular Shuttle
+- :id: 1567
+  :faction_id: 
+  :name: Irregular Corvette
+- :id: 1568
+  :faction_id: 
+  :name: Irregular Frigate
+- :id: 1664
+  :faction_id: 
+  :name: Irregular Destroyer
+- :id: 1665
+  :faction_id: 
+  :name: Irregular Cruiser
+- :id: 1666
+  :faction_id: 
+  :name: Irregular Battlecruiser
+- :id: 1667
+  :faction_id: 
+  :name: Irregular Battleship
+- :id: 1681
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Dreadnought
+- :id: 1682
+  :faction_id: 500011
+  :name: Asteroid Angel Cartel Titan
+- :id: 1683
+  :faction_id: 500012
+  :name: Asteroid Blood Raider Dreadnought
+- :id: 1684
+  :faction_id: 500012
+  :name: Asteroid Blood Raider Titan
+- :id: 1685
+  :faction_id: 500010
+  :name: Asteroid Guristas Dreadnought
+- :id: 1686
+  :faction_id: 500010
+  :name: Asteroid Guristas Titan
+- :id: 1687
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Dreadnought
+- :id: 1688
+  :faction_id: 500019
+  :name: Asteroid Sansha's Nation Supercarrier
+- :id: 1689
+  :faction_id: 500020
+  :name: Asteroid Serpentis Dreadnought
+- :id: 1690
+  :faction_id: 500020
+  :name: Asteroid Serpentis Titan
+- :id: 1691
+  :faction_id: 
+  :name: Asteroid Rogue Drone Carrier
+- :id: 1692
+  :faction_id: 
+  :name: Asteroid Rogue Drone Supercarrier
+- :id: 1720
+  :faction_id: 500020
+  :name: Roaming Serpentis Battleship
+- :id: 1721
+  :faction_id: 500020
+  :name: Roaming Serpentis Cruiser
+- :id: 1722
+  :faction_id: 500020
+  :name: Roaming Serpentis Frigate
+- :id: 1724
+  :faction_id: 
+  :name: Irregular Dreadnought
+- :id: 1725
+  :faction_id: 
+  :name: Irregular Force Auxiliary
+- :id: 1726
+  :faction_id: 
+  :name: Irregular Carrier
+- :id: 1727
+  :faction_id: 500011
+  :name: Roaming Angel Cartel Battleship
+- :id: 1728
+  :faction_id: 500011
+  :name: Roaming Angel Cartel Cruiser
+- :id: 1729
+  :faction_id: 500011
+  :name: Roaming Angel Cartel Frigate
+- :id: 1731
+  :faction_id: 
+  :name: Irregular Super Carrier
+- :id: 1734
+  :faction_id: 500012
+  :name: Roaming Blood Raider Frigate
+- :id: 1735
+  :faction_id: 500012
+  :name: Roaming Blood Raider Cruiser
+- :id: 1736
+  :faction_id: 500012
+  :name: Roaming Blood Raider Battlecruiser
+- :id: 1737
+  :faction_id: 500012
+  :name: Roaming Blood Raider Battleship
+- :id: 1759
+  :faction_id: 
+  :name: Irregular Titan
+- :id: 1761
+  :faction_id: 
+  :name: Irregular Mining Frigate
+- :id: 1762
+  :faction_id: 
+  :name: Irregular Mining Barge
+- :id: 1764
+  :faction_id: 
+  :name: "♦ Mining Frigate"
+- :id: 1765
+  :faction_id: 
+  :name: "♦ Mining Barge"
+- :id: 1766
+  :faction_id: 
+  :name: "♦ Mining Exhumer"
+- :id: 1767
+  :faction_id: 
+  :name: "♦ Mining Hauler"
+- :id: 1768
+  :faction_id: 
+  :name: Tutorial Seekers
+- :id: 1788
+  :faction_id: 
+  :name: Hidden Zenith Drifters
+- :id: 1789
+  :faction_id: 500003
+  :name: Hidden Zenith Amarr Battleship
+- :id: 1790
+  :faction_id: 500003
+  :name: Hidden Zenith Amarr Cruiser
+- :id: 1791
+  :faction_id: 500003
+  :name: Hidden Zenith Amarr Frigate
+- :id: 1792
+  :faction_id: 500001
+  :name: 'Hidden Zenith Caldari Battleship '
+- :id: 1793
+  :faction_id: 500001
+  :name: Hidden Zenith Caldari Cruiser
+- :id: 1794
+  :faction_id: 500001
+  :name: Hidden Zenith Caldari Frigate
+- :id: 1795
+  :faction_id: 500004
+  :name: Hidden Zenith Gallente Battleship
+- :id: 1796
+  :faction_id: 500004
+  :name: Hidden Zenith Gallente Cruiser
+- :id: 1797
+  :faction_id: 500004
+  :name: Hidden Zenith Gallente Frigate
+- :id: 1798
+  :faction_id: 500002
+  :name: Hidden Zenith Minmatar Battleship
+- :id: 1799
+  :faction_id: 500002
+  :name: Hidden Zenith Minmatar Cruiser
+- :id: 1800
+  :faction_id: 500002
+  :name: Hidden Zenith Minmatar Frigate
+- :id: 1803
+  :faction_id: 
+  :name: "♦ Frigate"
+- :id: 1804
+  :faction_id: 500003
+  :name: Hidden Zenith Amarr Capital
+- :id: 1805
+  :faction_id: 500001
+  :name: Hidden Zenith Caldari Capital
+- :id: 1806
+  :faction_id: 500004
+  :name: Hidden Zenith Gallente Capital
+- :id: 1807
+  :faction_id: 500002
+  :name: Hidden Zenith Minmatar Capital
+- :id: 1813
+  :faction_id: 
+  :name: "♦ Cruiser"
+- :id: 1814
+  :faction_id: 
+  :name: "♦ Battleship"
+- :id: 1872
+  :faction_id: 
+  :name: Structure Entities
+- :id: 1878
+  :faction_id: 
+  :name: "♦ Titan"
+- :id: 1879
+  :faction_id: 
+  :name: "♦ Force Auxiliary"
+- :id: 1880
+  :faction_id: 
+  :name: "♦ Dreadnought"
+- :id: 1895
+  :faction_id: 
+  :name: Irregular Industrial
+- :id: 1896
+  :faction_id: 
+  :name: "♦ Industrial Command "
+- :id: 1909
+  :faction_id: 
+  :name: "♦ Battlecruiser"
+- :id: 1925
+  :faction_id: 
+  :name: Irregular Industrial Command Ship
+- :id: 1926
+  :faction_id: 
+  :name: Irregular Freighter
+- :id: 1927
+  :faction_id: 
+  :name: Irregular Structure
+- :id: 1928
+  :faction_id: 
+  :name: Irregular Container
+- :id: 1929
+  :faction_id: 
+  :name: Irregular - Unidentified
+- :id: 1956
+  :faction_id: 
+  :name: Drifter Reinforcements

@@ -1,0 +1,21 @@
+%ol.breadcrumb
+  %li.breadcrumb-item= link_to @rat.name, rats_path(@rat)
+  %li.breadcrumb-item.active Details
+
+.panel.panel-default
+  .panel-body
+    %table.table.table-condensed
+      %caption Hover Attribute Name cell for description
+      %thead
+        %tr
+          %th Attribute Name
+          %th Attribute Display Name
+          %th Snake Case Attribute Name
+          %th Value
+      - @rat.rat_attributes.sort_by { |a| a.name }.each do |attribute|
+        %tr
+          %th
+            %span{ tooltip(attribute.description).merge({style: 'cursor: pointer'}) }= attribute.name
+          %td= attribute.display_name || '-'
+          %td= attribute.name.underscore
+          %td= attribute.value

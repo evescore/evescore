@@ -1,0 +1,10 @@
+%ol.breadcrumb
+  %li.breadcrumb-item
+    = link_to 'Factions', factions_path
+  %li.breadcrumb-item= link_to 'Generic Groups', generic_groups_path
+  %li.breadcrumb-item.active= @group.name
+
+.panel.panel-default
+  .panel-body
+    - @rats.each do |rat|
+      %p= link_to rat.name, rats_path(rat.id)

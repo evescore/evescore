@@ -1,0 +1,12 @@
+{
+  "name": "evescore",
+  "private": true,
+  "dependencies": {
+    "bootstrap-select": "^1.12.4",
+    "handlebars": "^4.0.11",
+    "typeahead.js": "^0.11.1"
+  },
+  "engines": {
+    "yarn": "1.5.1"
+  }
+}

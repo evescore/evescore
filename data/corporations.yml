@@ -1,0 +1,530 @@
+---
+- :_id: 1000002
+  :name: CBD Corporation
+  :ticker: CBDC
+  :npc: true
+- :_id: 1000003
+  :name: Prompt Delivery
+  :ticker: PD
+- :_id: 1000078
+  :name: Imperial Chancellor
+  :ticker: IC
+- :_id: 1000079
+  :name: Amarr Civil Service
+  :ticker: ACS
+- :_id: 1000080
+  :name: Ministry of War
+  :ticker: MW
+- :_id: 1000081
+  :name: Ministry of Assessment
+  :ticker: MI
+- :_id: 1000082
+  :name: Ministry of Internal Order
+  :ticker: MIO
+- :_id: 1000083
+  :name: Amarr Trade Registry
+  :ticker: ATR
+- :_id: 1000084
+  :name: Amarr Navy
+  :ticker: AN
+- :_id: 1000085
+  :name: Court Chamberlain
+  :ticker: CO
+- :_id: 1000086
+  :name: Emperor Family
+  :ticker: EF
+- :_id: 1000087
+  :name: Kador Family
+  :ticker: KF
+- :_id: 1000088
+  :name: Sarum Family
+  :ticker: SF
+- :_id: 1000089
+  :name: Kor-Azor Family
+  :ticker: KAF
+- :_id: 1000090
+  :name: Ardishapur Family
+  :ticker: AF
+- :_id: 1000091
+  :name: Tash-Murkon Family
+  :ticker: TMF
+- :_id: 1000092
+  :name: Civic Court
+  :ticker: CI
+- :_id: 1000093
+  :name: Theology Council
+  :ticker: T
+- :_id: 1000094
+  :name: TransStellar Shipping
+  :ticker: TSS
+- :_id: 1000095
+  :name: Federal Freight
+  :ticker: FF
+- :_id: 1000096
+  :name: Inner Zone Shipping
+  :ticker: IZS
+- :_id: 1000097
+  :name: Material Acquisition
+  :ticker: MA
+- :_id: 1000098
+  :name: Astral Mining Inc.
+  :ticker: AMI
+- :_id: 1000099
+  :name: Combined Harvest
+  :ticker: CH
+- :_id: 1000100
+  :name: Quafe Company
+  :ticker: QC
+- :_id: 1000101
+  :name: CreoDron
+  :ticker: CD
+- :_id: 1000102
+  :name: Roden Shipyards
+  :ticker: RS
+- :_id: 1000103
+  :name: Allotek Industries
+  :ticker: AI
+- :_id: 1000104
+  :name: Poteque Pharmaceuticals
+  :ticker: PP
+- :_id: 1000105
+  :name: Impetus
+  :ticker: I
+- :_id: 1000106
+  :name: Egonics Inc.
+  :ticker: EI
+- :_id: 1000107
+  :name: The Scope
+  :ticker: TS
+- :_id: 1000108
+  :name: Chemal Tech
+  :ticker: CT
+- :_id: 1000109
+  :name: Duvolle Laboratories
+  :ticker: DL
+- :_id: 1000110
+  :name: FedMart
+  :ticker: FM
+- :_id: 1000111
+  :name: Aliastra
+  :ticker: A
+- :_id: 1000112
+  :name: Bank of Luminaire
+  :ticker: BL
+- :_id: 1000113
+  :name: Pend Insurance
+  :ticker: PI
+- :_id: 1000114
+  :name: Garoun Investment Bank
+  :ticker: GIB
+- :_id: 1000115
+  :name: University of Caille
+  :ticker: UC
+- :_id: 1000116
+  :name: President
+  :ticker: PR
+- :_id: 1000117
+  :name: Senate
+  :ticker: SE
+- :_id: 1000118
+  :name: Supreme Court
+  :ticker: SU
+- :_id: 1000119
+  :name: Federal Administration
+  :ticker: FA
+- :_id: 1000120
+  :name: Federation Navy
+  :ticker: FN
+- :_id: 1000121
+  :name: Federal Intelligence Office
+  :ticker: FIO
+- :_id: 1000122
+  :name: Federation Customs
+  :ticker: FC
+- :_id: 1000123
+  :name: Ammatar Fleet
+  :ticker: ATF
+- :_id: 1000124
+  :name: Archangels
+  :ticker: ARCA
+- :_id: 1000125
+  :name: CONCORD
+  :ticker: CONCO
+- :_id: 1000126
+  :name: Ammatar Consulate
+  :ticker: ATC
+- :_id: 1000127
+  :name: Guristas
+  :ticker: G
+- :_id: 1000129
+  :name: Outer Ring Excavations
+  :ticker: ORE
+- :_id: 1000130
+  :name: Sisters of EVE
+  :ticker: SEVE
+- :_id: 1000131
+  :name: Society of Conscious Thought
+  :ticker: SCT
+- :_id: 1000132
+  :name: Secure Commerce Commission
+  :ticker: SCC
+- :_id: 1000133
+  :name: Salvation Angels
+  :ticker: SAG
+- :_id: 1000134
+  :name: Blood Raiders
+  :ticker: TBR
+- :_id: 1000135
+  :name: Serpentis Corporation
+  :ticker: SPC
+- :_id: 1000136
+  :name: Guardian Angels
+  :ticker: GA
+- :_id: 1000137
+  :name: DED
+  :ticker: DED
+- :_id: 1000138
+  :name: Dominations
+  :ticker: DOM
+- :_id: 1000139
+  :name: Food Relief
+  :ticker: FRL
+- :_id: 1000140
+  :name: Genolution
+  :ticker: GNL
+- :_id: 1000141
+  :name: Guristas Production
+  :ticker: GUP
+- :_id: 1000142
+  :name: Impro
+  :ticker: IPR
+- :_id: 1000144
+  :name: Intaki Bank
+  :ticker: IBK
+- :_id: 1000145
+  :name: Intaki Commerce
+  :ticker: ICM
+- :_id: 1000146
+  :name: Intaki Space Police
+  :ticker: ISP
+- :_id: 1000147
+  :name: Intaki Syndicate
+  :ticker: ISD
+- :_id: 1000149
+  :name: Jove Navy
+  :ticker: JVN
+- :_id: 1000150
+  :name: Jovian Directorate
+  :ticker: JDR
+- :_id: 1000152
+  :name: Khanid Transport
+  :ticker: KTP
+- :_id: 1000154
+  :name: Nefantar Miner Association
+  :ticker: NMA
+- :_id: 1000155
+  :name: Prosper
+  :ticker: PRP
+- :_id: 1000156
+  :name: Royal Khanid Navy
+  :ticker: RKN
+- :_id: 1000158
+  :name: Shapeset
+  :ticker: SPS
+- :_id: 1000160
+  :name: Thukker Mix
+  :ticker: TMX
+- :_id: 1000161
+  :name: True Creations
+  :ticker: TCR
+- :_id: 1000162
+  :name: True Power
+  :ticker: TPW
+- :_id: 1000163
+  :name: Trust Partners
+  :ticker: TPT
+- :_id: 1000164
+  :name: X-Sense
+  :ticker: XSN
+- :_id: 1000165
+  :name: Hedion University
+  :ticker: HU
+- :_id: 1000166
+  :name: Imperial Academy
+  :ticker: IAC
+- :_id: 1000167
+  :name: State War Academy
+  :ticker: SWA
+- :_id: 1000168
+  :name: Federal Navy Academy
+  :ticker: FNA
+- :_id: 1000169
+  :name: Center for Advanced Studies
+  :ticker: CAS
+- :_id: 1000170
+  :name: Republic Military School
+  :ticker: RMS
+- :_id: 1000171
+  :name: Republic University
+  :ticker: RUN
+- :_id: 1000172
+  :name: Pator Tech School
+  :ticker: PTS
+- :_id: 1000004
+  :name: Ytiri
+  :ticker: Y
+- :_id: 1000005
+  :name: Hyasyoda Corporation
+  :ticker: HC
+- :_id: 1000006
+  :name: Deep Core Mining Inc.
+  :ticker: DCMI
+- :_id: 1000007
+  :name: Poksu Mineral Group
+  :ticker: PMG
+- :_id: 1000008
+  :name: Minedrill
+  :ticker: M
+- :_id: 1000009
+  :name: Caldari Provisions
+  :ticker: CP
+- :_id: 1000010
+  :name: Kaalakiota Corporation
+  :ticker: KC
+- :_id: 1000011
+  :name: Wiyrkomi Corporation
+  :ticker: WC
+- :_id: 1000012
+  :name: Top Down
+  :ticker: TD
+- :_id: 1000013
+  :name: Rapid Assembly
+  :ticker: RA
+- :_id: 1000014
+  :name: Perkone
+  :ticker: P
+- :_id: 1000015
+  :name: Caldari Steel
+  :ticker: CS
+- :_id: 1000016
+  :name: Zainou
+  :ticker: ZA
+- :_id: 1000017
+  :name: Nugoeihuvi Corporation
+  :ticker: NC
+- :_id: 1000018
+  :name: Echelon Entertainment
+  :ticker: EE
+- :_id: 1000019
+  :name: Ishukone Corporation
+  :ticker: ISH
+- :_id: 1000020
+  :name: Lai Dai Corporation
+  :ticker: LDC
+- :_id: 1000022
+  :name: Propel Dynamics
+  :ticker: PRO
+- :_id: 1000023
+  :name: Expert Distribution
+  :ticker: ED
+- :_id: 1000024
+  :name: CBD Sell Division
+  :ticker: CBDSD
+- :_id: 1000025
+  :name: Sukuuvestaa Corporation
+  :ticker: SC
+- :_id: 1000026
+  :name: Caldari Constructions
+  :ticker: CC
+- :_id: 1000027
+  :name: Expert Housing
+  :ticker: EH
+- :_id: 1000028
+  :name: Caldari Funds Unlimited
+  :ticker: CFU
+- :_id: 1000029
+  :name: State and Region Bank
+  :ticker: SRB
+- :_id: 1000030
+  :name: Modern Finances
+  :ticker: MF
+- :_id: 1000031
+  :name: Chief Executive Panel
+  :ticker: CEP
+- :_id: 1000032
+  :name: Mercantile Club
+  :ticker: MC
+- :_id: 1000033
+  :name: Caldari Business Tribunal
+  :ticker: CBT
+- :_id: 1000034
+  :name: House of Records
+  :ticker: HR
+- :_id: 1000035
+  :name: Caldari Navy
+  :ticker: CN
+- :_id: 1000036
+  :name: Internal Security
+  :ticker: IN
+- :_id: 1000037
+  :name: Lai Dai Protection Service
+  :ticker: LDPS
+- :_id: 1000038
+  :name: Ishukone Watch
+  :ticker: IW
+- :_id: 1000039
+  :name: Home Guard
+  :ticker: HG
+- :_id: 1000040
+  :name: Peace and Order Unit
+  :ticker: POU
+- :_id: 1000041
+  :name: Spacelane Patrol
+  :ticker: SP
+- :_id: 1000042
+  :name: Wiyrkomi Peace Corps
+  :ticker: WPC
+- :_id: 1000043
+  :name: Corporate Police Force
+  :ticker: CPF
+- :_id: 1000044
+  :name: School of Applied Knowledge
+  :ticker: SAK
+- :_id: 1000045
+  :name: Science and Trade Institute
+  :ticker: STI
+- :_id: 1000046
+  :name: Sebiestor Tribe
+  :ticker: S
+- :_id: 1000047
+  :name: Krusual Tribe
+  :ticker: K
+- :_id: 1000048
+  :name: Vherokior Tribe
+  :ticker: V
+- :_id: 1000049
+  :name: Brutor Tribe
+  :ticker: B
+- :_id: 1000050
+  :name: Republic Parliament
+  :ticker: RP
+- :_id: 1000051
+  :name: Republic Fleet
+  :ticker: RF
+- :_id: 1000052
+  :name: Republic Justice Department
+  :ticker: RJD
+- :_id: 1000053
+  :name: Urban Management
+  :ticker: UM
+- :_id: 1000054
+  :name: Republic Security Services
+  :ticker: RSS
+- :_id: 1000055
+  :name: Minmatar Mining Corporation
+  :ticker: MMC
+- :_id: 1000056
+  :name: Core Complexion Inc.
+  :ticker: CCI
+- :_id: 1000057
+  :name: Boundless Creation
+  :ticker: BC
+- :_id: 1000058
+  :name: Eifyr and Co.
+  :ticker: EC
+- :_id: 1000059
+  :name: Six Kin Development
+  :ticker: SKD
+- :_id: 1000060
+  :name: Native Freshfood
+  :ticker: NF
+- :_id: 1000061
+  :name: Freedom Extension
+  :ticker: FE
+- :_id: 1000062
+  :name: The Leisure Group
+  :ticker: TLG
+- :_id: 1000063
+  :name: Amarr Constructions
+  :ticker: AC
+- :_id: 1000064
+  :name: Carthum Conglomerate
+  :ticker: C
+- :_id: 1000065
+  :name: Imperial Armaments
+  :ticker: IA
+- :_id: 1000066
+  :name: Viziam
+  :ticker: VI
+- :_id: 1000067
+  :name: Zoar and Sons
+  :ticker: ZS
+- :_id: 1000068
+  :name: Noble Appliances
+  :ticker: NA
+- :_id: 1000069
+  :name: Ducia Foundry
+  :ticker: DF
+- :_id: 1000070
+  :name: HZO Refinery
+  :ticker: HZOR
+- :_id: 1000071
+  :name: Inherent Implants
+  :ticker: II
+- :_id: 1000072
+  :name: Imperial Shipment
+  :ticker: IS
+- :_id: 1000073
+  :name: Amarr Certified News
+  :ticker: ACN
+- :_id: 1000074
+  :name: Joint Harvesting
+  :ticker: JH
+- :_id: 1000075
+  :name: Nurtura
+  :ticker: N
+- :_id: 1000076
+  :name: Further Foodstuffs
+  :ticker: FU
+- :_id: 1000077
+  :name: Royal Amarr Institute
+  :ticker: RIN
+- :_id: 1000128
+  :name: Mordu's Legion
+  :ticker: MLG
+- :_id: 1000143
+  :name: Inner Circle
+  :ticker: ICR
+- :_id: 1000148
+  :name: InterBus
+  :ticker: INB
+- :_id: 1000151
+  :name: Khanid Innovation
+  :ticker: KIV
+- :_id: 1000153
+  :name: Khanid Works
+  :ticker: KWK
+- :_id: 1000157
+  :name: Serpentis Inquest
+  :ticker: SPI
+- :_id: 1000159
+  :name: The Sanctuary
+  :ticker: SAN
+- :_id: 1000021
+  :name: Zero-G Research Firm
+  :ticker: ZGRF
+- :_id: 1000179
+  :name: 24th Imperial Crusade
+  :ticker: IC24
+- :_id: 1000180
+  :name: State Protectorate
+  :ticker: SPROT
+- :_id: 1000181
+  :name: Federal Defense Union
+  :ticker: FEDEF
+- :_id: 1000182
+  :name: Tribal Liberation Force
+  :ticker: TLIB
+- :_id: 1000274
+  :name: Vigilant Tyrannos
+  :ticker: VI-TY

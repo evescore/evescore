@@ -1,0 +1,103 @@
+.panel.panel-default
+  %table.table.table-striped.table-rounded
+    %tr
+      %td{:rowspan => "2", :style => "width: 148px"}
+        = character_image(@character.id)
+        = corporation_image(@character.corporation_id, 64)
+      %td= @character.name
+      %th.numeric Total ISK Earned
+      %th.numeric Total Rat Kills
+      %th.numeric Average Tick
+      %th.numeric Favourite Faction
+    %tr
+      %td= @character.corporation.name
+      %td.numeric= number_to_isk_short @character.total_isk
+      %td.numeric= number_with_delimiter @character.total_kills
+      %td.numeric= number_to_isk_short @character.average_tick
+      %td.numeric
+        = corporation_image @character.favourite_faction['corporation_id']
+        = @character.favourite_faction['name']
+    %tr
+      %td{:colspan => "2"}
+      %th.numeric Total Missions Run
+      %th.numeric Favourite Mission Level
+      %th.numeric Total DED Sites Run
+      %th.numeric Favourite DED Site
+    %tr
+      %td{:colspan => "2"}
+      %td.numeric= number_with_delimiter @character.missions_run
+      %td.numeric= mission_level_label @character.favourite_mission_level
+      %td.numeric= number_with_delimiter @character.ded_sites_run
+      %td.numeric
+        = faction_image @character.favourite_ded_site['ded_faction_id']
+        = ded_site? @character.favourite_ded_site
+.row
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Earnings - Last 5 Days
+        %span.pull-right= link_to 'More', character_earnings_path(@character)
+      %thead
+        %tr
+          %th.icon
+          %th Date
+          %th.numeric Amount
+      %tbody
+        - @earnings_by_day.each do |record|
+          %tr
+            %td= isk_image
+            %td= record['date'].to_date.to_s
+            %td.numeric= number_to_isk record['amount']
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Top 5 Ticks
+        %span.pull-right= link_to 'More', character_ticks_path(@character)
+      %thead
+        %tr
+          %th.icon
+          %th Timestamp
+          %th.numeric Amount
+      %tbody
+        - @top_ticks.each do |record|
+          %tr
+            %td= record_icon(record)
+            %td= record.ts
+            %td.numeric= number_to_isk record.amount
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Top 5 Rats Bounty
+        %span.pull-right= link_to 'More', character_rats_path(@character)
+      %thead
+        %tr
+          %th.icon
+          %th Rat Name
+          %th.numeric Bounty
+      %tbody
+        - @valuable_rats.each do |record|
+          %tr
+            %td= kill_image(record)
+            %td= record['name']
+            %td.numeric= number_to_isk_short record['bounty']
+%table.table.table-striped
+  %caption
+    Last 5 Ticks
+    %span.pull-right= link_to 'More', character_journal_path(@character)
+  %thead
+    %tr
+      %th.icon
+      %th.timestamp Timestamp
+      %th.details Details
+      %th
+      %th.numeric Amount
+  %tbody
+    - @ticks.each do |record|
+      %tr
+        %td= record_icon(record)
+        %td= record.ts
+        %td= record_details(record)
+        %td
+          - record.kills.each do |kill|
+            = kill_image(kill)
+        %td.numeric= number_to_isk record.amount
