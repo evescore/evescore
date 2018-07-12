@@ -12,6 +12,8 @@ class Rat
   belongs_to :ded_site, optional: true
 
   before_save :details_from_api, :set_faction, unless: :just_save
+  
+  scope :with_bounty, -> { where(:bounty.ne => nil).where(:bounty.gt => 0)}
 
   alias rat_attributes api_attributes
 

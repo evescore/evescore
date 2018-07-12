@@ -75,7 +75,7 @@ module ProfileStats
   end
 
   def favourite_faction
-    kills_by_faction.first || OpenStruct.new
+    kills_by_faction.to_a.select { |a| a['corporation_id'] }.first || OpenStruct.new
   end
 
   def favourite_ded_site
