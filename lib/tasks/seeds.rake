@@ -16,7 +16,8 @@ namespace :seeds do
 
   desc 'Load Seed Data'
   task load: :environment do
-    User.where(email: 'foo@bar.com', password: 'qwerty').first_or_create
+    u = User.new(email: 'foo@bar.com', password: 'qwerty', confirmed_at: Time.now)
+    u.save unless user
     chars.each do |char|
       Character.where(id: char['_id']).first || Character.create(char)
     end
