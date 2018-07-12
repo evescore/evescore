@@ -11,6 +11,9 @@ class WelcomeController < ApplicationController
   before_action :total_missions, only: :index
   before_action :corporations_top_isk, only: :index
   before_action :corporations_top_tax, only: :index
+  before_action :public_top_ded_sites, only: :index
+  before_action :public_top_missions, only: :index
+  before_action :public_top_kills, only: :index
 
   DEFAULT_PER_PAGE = 10
 
@@ -70,5 +73,17 @@ class WelcomeController < ApplicationController
 
   def corporations_top_tax
     @corporations_top_tax = WalletRecord.corporations_top_tax(5)
+  end
+
+  def public_top_ded_sites
+    @public_top_ded_sites = WalletRecord.public_top_ded_sites
+  end
+
+  def public_top_missions
+    @public_top_missions = WalletRecord.public_top_missions
+  end
+
+  def public_top_kills
+    @public_top_kills = Kill.public_top(5)
   end
 end

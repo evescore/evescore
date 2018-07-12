@@ -2,6 +2,7 @@
 
 class WalletRecord
   include Mongoid::Document
+  include TopAggregations
   field :ts, type: Time
   field :date, type: Date
   field :amount, type: Float
@@ -81,18 +82,18 @@ class WalletRecord
     end
   end
 
-  def self.public_records
-    where(:character_id.in => Character.public_characters.map(&:id))
-  end
-
   def self.public_top_ticks
     public_records.order('amount desc')
   end
 
-  def self.aggregate_public_top_pipeline(query, limit)
-    pipeline = query.pipeline
-    pipeline.push('$limit' => limit) if limit
-    collection.aggregate pipeline
+  def self.public_top_ded_sites(limit = nil)
+    query = public_records.ded_sites.group(_id: '$character_id', count: { '$sum' => 1 }).desc(:count)
+    aggregate_public_top_pipeline(query, limit)
+  end
+
+  def self.public_top_missions(limit = nil)
+    query = public_records.missions.group(_id: '$character_id', count: { '$sum' => 1 }).desc(:count)
+    aggregate_public_top_pipeline(query, limit)
   end
 
   def self.public_top_isk(limit = nil)
@@ -106,7 +107,7 @@ class WalletRecord
   end
 
   def self.corporations_top_tax(limit = nil)
-    query = public_records.group(_id: '$corporation_id', :tax.sum => '$tax').desc(:tax)
+    query = public_records.ded_sites.group(_id: '$corporation_id', :tax.sum => '$tax').desc(:tax)
     aggregate_public_top_pipeline(query, limit)
   end
 
