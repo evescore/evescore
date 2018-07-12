@@ -1,6 +1,4 @@
 # frozen_string_literal: true
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
 
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.11.0'
@@ -49,4 +47,11 @@ set :deploy_to, '/home/rails/evescore'
 #   end
 # end
 
+task :whenever do
+  on roles(:all) do
+    execute :bundle, :exec, :whenever, '-w'
+  end
+end
+
 # after "deploy:finished", :restart_app
+after 'deploy:finished', :whenever
