@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  def crest
+  def esi
     redirect_to root_path && return unless current_user
     omniauth_payload = request.env['omniauth.auth']
     current_user.import_character(omniauth_payload)
