@@ -47,3 +47,67 @@
             %td= character_image(record['_id'], 32)
             %td= Character.find(record['_id']).name
             %td.numeric= number_to_isk_short record['amount']
+.row
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Global
+        %span.pull-right= link_to 'More', '#'
+      %thead
+        %tr
+          %th.icon
+          %th Feat
+          %th.numeric Value
+      %tbody
+        %tr
+          %td= isk_image
+          %td Total ISK
+          %td.numeric= number_to_isk @total_isk
+        %tr
+          %td= isk_image
+          %td Total Tax
+          %td.numeric= number_to_isk @total_tax
+        %tr
+          %td= icon_tag(:skull)
+          %td Total Kills
+          %td.numeric= number_with_delimiter @total_kills
+        %tr
+          %td= corporation_image(1000137)
+          %td DED Sites Completed
+          %td.numeric= number_with_delimiter @total_ded_sites
+        %tr
+          %td= icon_tag(:lp)
+          %td Missions Completed
+          %td.numeric= number_with_delimiter @total_missions
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Top 5 Total ISK Earned (Corporations)
+        %span.pull-right= link_to 'More', '#'
+      %thead
+        %tr
+          %th.icon
+          %th Character
+          %th.numeric Amount
+      %tbody
+        - @corporations_top_isk.each do |record|
+          %tr
+            %td= corporation_image(record['_id'], 32)
+            %td= Corporation.find(record['_id']).name
+            %td.numeric= number_to_isk_short record['amount']
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Top 5 Total Tax Collected
+        %span.pull-right= link_to 'More', '#'
+      %thead
+        %tr
+          %th.icon
+          %th Character
+          %th.numeric Amount
+      %tbody
+        - @corporations_top_tax.each do |record|
+          %tr
+            %td= corporation_image(record['_id'], 32)
+            %td= Corporation.find(record['_id']).name
+            %td.numeric= number_to_isk_short record['tax']

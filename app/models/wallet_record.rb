@@ -11,6 +11,7 @@ class WalletRecord
   field :mission_level, type: Integer
   index({ character_id: 1, ts: 1 }, unique: true, drop_dups: true)
   belongs_to :character
+  belongs_to :corporation, optional: true
   belongs_to :user, optional: true
   belongs_to :agent, optional: true
   belongs_to :ded_site, optional: true
@@ -19,6 +20,8 @@ class WalletRecord
 
   scope :ded_sites, -> { where(:ded_site_id.ne => nil) }
   scope :missions, -> { where(:mission_level.ne => nil) }
+
+  before_save :assign_corporation
 
   IMPORTABLE_REF_TYPES = %w[
     agent_mission_time_bonus_reward
@@ -38,6 +41,10 @@ class WalletRecord
     )
     record.build_kills(wallet_record.reason)
     record.save
+  end
+
+  def assign_corporation
+    self.corporation_id = character.corporation_id
   end
 
   def self.mission_level(agent_id)
@@ -90,6 +97,16 @@ class WalletRecord
 
   def self.public_top_isk(limit = nil)
     query = public_records.group(_id: '$character_id', :amount.sum => '$amount').desc(:amount)
+    aggregate_public_top_pipeline(query, limit)
+  end
+
+  def self.corporations_top_isk(limit = nil)
+    query = public_records.group(_id: '$corporation_id', :amount.sum => '$amount').desc(:amount)
+    aggregate_public_top_pipeline(query, limit)
+  end
+
+  def self.corporations_top_tax(limit = nil)
+    query = public_records.group(_id: '$corporation_id', :tax.sum => '$tax').desc(:tax)
     aggregate_public_top_pipeline(query, limit)
   end
 
