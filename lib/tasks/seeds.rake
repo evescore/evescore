@@ -44,7 +44,7 @@ task seed: :environment do
       rats.push(boss)
       amount = rand 100_000_000
       date = ts.to_date
-      wallet_record = character.wallet_records.create(date: date, amount: amount, ts: ts, type: 'bounty_prizes', ded_site_id: boss.ded_site.id)
+      wallet_record = character.wallet_records.create(tax: 0.1 * amount, date: date, amount: amount, ts: ts, type: 'bounty_prizes', ded_site_id: boss.ded_site.id)
       rats.each do |rat|
         wallet_record.kills.create(character_id: character.id, rat_id: rat.id, amount: rand(1..5))
       end
@@ -54,7 +54,7 @@ task seed: :environment do
       rats = Rat.where(:id.in => Rat.with_bounty.map(&:id).sample(rand(1..5)))
       amount = rand 100_000_000
       date = ts.to_date
-      wallet_record = character.wallet_records.create(date: date, amount: amount, ts: ts, type: 'bounty_prizes')
+      wallet_record = character.wallet_records.create(tax: 0.1 * amount, date: date, amount: amount, ts: ts, type: 'bounty_prizes')
       rats.each do |rat|
         wallet_record.kills.create(character_id: character.id, rat_id: rat.id, amount: rand(1..5))
       end
@@ -64,7 +64,7 @@ task seed: :environment do
       agent = Agent.all.sample
       amount = rand 10_000_000
       date = ts.to_date
-      character.wallet_records.create(date: date, amount: amount, ts: ts, type: 'agent_mission_reward', agent_id: agent.id, mission_level: rand(1..5))
+      character.wallet_records.create(tax: 0.1 * amount, date: date, amount: amount, ts: ts, type: 'agent_mission_reward', agent_id: agent.id, mission_level: rand(1..5))
     end
   end
 end
