@@ -49,6 +49,7 @@ set :deploy_to, '/home/rails/evescore'
 
 task :whenever do
   on roles(:all) do
+    execute :cd, current_path
     execute :bundle, :exec, :whenever, '-w'
   end
 end
