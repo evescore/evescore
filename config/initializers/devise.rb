@@ -252,8 +252,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :crest, 'd8e64f0d0a4e4a4d867052b0c93ec01e', 'cZQvip2l9Yy7tbzmjiBCerxhsXJ3iwHHxpEy7OBW', scope: 'esi-wallet.read_character_wallet.v1' if Rails.env != 'production'
-  config.omniauth :crest, ENV['EVE_API_APP_ID'], ENV['EVE_API_APP_SECRET'], scope: 'esi-wallet.read_character_wallet.v1', callback_url: 'http://evescore.online/users/auth/crest/callback' if Rails.env.production?
+  config.omniauth :esi, 'd8e64f0d0a4e4a4d867052b0c93ec01e', 'cZQvip2l9Yy7tbzmjiBCerxhsXJ3iwHHxpEy7OBW', scope: 'esi-wallet.read_character_wallet.v1' if Rails.env != 'production'
+  config.omniauth :esi, ENV['EVE_API_APP_ID'], ENV['EVE_API_APP_SECRET'], scope: 'esi-wallet.read_character_wallet.v1', redirect_uri: 'https://evescore.online/users/auth/crest/callback' if Rails.env.production?
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
