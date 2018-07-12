@@ -40,12 +40,12 @@ set :deploy_to, '/home/rails/evescore'
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-# task :restart_app do
-#   on roles(:all) do
-#     execute :sudo, :service, "evescore-web", :restart
-#     execute :sudo, :service, "evescore-worker", :restart
-#   end
-# end
+task :restart_app do
+  on roles(:all) do
+    execute :sudo, :service, 'evescore-web', :restart
+    execute :sudo, :service, 'evescore-worker', :restart
+  end
+end
 
 task :whenever do
   on roles(:all) do
@@ -55,5 +55,5 @@ task :whenever do
   end
 end
 
-# after "deploy:finished", :restart_app
 after 'deploy:finished', :whenever
+after 'deploy:finished', :restart_app
