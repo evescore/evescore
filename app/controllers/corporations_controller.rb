@@ -5,7 +5,7 @@ class CorporationsController < ApplicationController
   DEFAULT_PER_PAGE = 50
   # GET /corporations
   def index
-    @corporations = Corporation.all.page(params[:page]).per(DEFAULT_PER_PAGE)
+    @corporations = Corporation.where(:characters_count.gt => 0).order('name asc').page(params[:page]).per(DEFAULT_PER_PAGE)
   end
 
   # GET /corporations/1

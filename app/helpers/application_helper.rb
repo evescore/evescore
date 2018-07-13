@@ -40,7 +40,7 @@ module ApplicationHelper
   end
 
   def number_to_isk_short(amount)
-    number_to_human amount, units: { thousand: 'K ISK', million: 'M ISK', billion: 'b ISK' }, format: '%n%u'
+    number_to_human amount, units: { unit: ' ISK', thousand: 'K ISK', million: 'M ISK', billion: 'b ISK' }, format: '%n%u'
   end
 
   def record_icon(record)

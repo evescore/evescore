@@ -24,6 +24,10 @@ class Corporation
     where(id: corporation_id, name: api_corporation.name, ticker: api_corporation.ticker, alliance_id: api_corporation.alliance_id).first_or_create
   end
 
+  def private?
+    characters.map(&:display_option).uniq == ['Private']
+  end
+
   def create_alliance
     return false unless alliance_id
     Alliance.create_from_api(alliance_id)
