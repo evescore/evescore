@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  def welcome_path
+    if request.path == '/'
+      url = URI.parse(request.url)
+      url.host = url.host.gsub(/(rats|ratopedia|rat)\./, '')
+      url.to_s
+    else
+      root_path
+    end
+  end
+
   def flash_to_alert(flash)
     case flash[0]
     when 'notice'

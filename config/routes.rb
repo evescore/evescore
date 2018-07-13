@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'legal', to: 'pages#legal'
+  get 'stats', to: 'pages#stats'
+  get 'info', to: 'pages#info'
+
   constraints subdomain: %w[rats ratopedia rat] do
     get '/', to: 'factions#index'
   end
