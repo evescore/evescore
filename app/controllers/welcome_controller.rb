@@ -80,7 +80,7 @@ class WelcomeController < ApplicationController
   end
 
   def public_top_missions
-    @public_top_missions = WalletRecord.public_top_missions
+    @public_top_missions = WalletRecord.public_top_missions(5)
   end
 
   def public_top_kills
