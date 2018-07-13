@@ -22,6 +22,7 @@ gem 'kaminari-mongoid'
 gem 'mongoid'
 gem 'omniauth-crest'
 gem 'passenger'
+gem 'pry-rails'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.4'
 gem 'ruby-esi', '~> 0.2'
@@ -44,7 +45,6 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'launchy'
   gem 'poltergeist'
-  gem 'pry-rails'
   gem 'rspec-rails'
 end
 
