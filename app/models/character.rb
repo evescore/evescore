@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class Character
-  include Mongoid::Document
-  include GlobalID::Identification
+  include MongoidSetup
   include EsiCharacterApi
   include ProfileStats
   field :name, type: String
@@ -12,7 +11,7 @@ class Character
   field :display_option, type: String
   belongs_to :corporation, optional: true
   belongs_to :alliance, optional: true
-  belongs_to :user
+  belongs_to :user, counter_cache: true
   has_many :wallet_records
   has_many :kills
 

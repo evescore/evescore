@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class WalletRecord
-  include Mongoid::Document
+  include MongoidSetup
   include TopAggregations
   field :ts, type: Time
   field :date, type: Date

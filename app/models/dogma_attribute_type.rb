@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class DogmaAttributeType
-  include Mongoid::Document
+  include MongoidSetup
   field :attribute_name, type: String
   field :category_id, type: Integer
   field :default_value, type: Float

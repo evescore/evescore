@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Rat
-  include Mongoid::Document
+  include MongoidSetup
   include ApiAttributes
   field :name, type: String
   field :bounty, type: Float

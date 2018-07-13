@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Corporation
-  include Mongoid::Document
+  include MongoidSetup
   field :name, type: String
   field :npc, type: Boolean
   field :ticker, type: String

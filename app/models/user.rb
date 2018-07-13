@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class User
-  include Mongoid::Document
+  include MongoidSetup
   include ProfileStats
+  field :characters_count, type: Integer, default: 0
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :omniauthable,
@@ -40,6 +41,13 @@ class User
   has_many :characters
   has_many :wallet_records
   has_many :kills
+  
+  def self.update_counter_caches
+    all.each do |user|
+      user.characters_count = user.characters.count
+      user.save
+    end
+  end
 
   def character_api
     ESI::CharacterApi.new

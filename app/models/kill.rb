@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class Kill
-  include Mongoid::Document
+  include MongoidSetup
   include TopAggregations
   field :ts, type: Time
   field :date, type: Date
   field :amount, type: Integer
   field :bounty, type: Float
-  belongs_to :wallet_record
+  belongs_to :wallet_record, counter_cache: true
   belongs_to :rat, optional: true
   belongs_to :faction, optional: true
   belongs_to :user, optional: true

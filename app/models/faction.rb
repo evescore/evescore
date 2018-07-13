@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Faction
-  include Mongoid::Document
+  include MongoidSetup
   field :name, type: String
   field :pattern, type: Regexp
   field :has_rats, type: Boolean

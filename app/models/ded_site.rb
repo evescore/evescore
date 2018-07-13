@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class DedSite
-  include Mongoid::Document
+  include MongoidSetup
   field :name, type: String
   field :level, type: String
   field :boss_ids_array, type: Array

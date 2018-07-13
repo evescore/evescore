@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Loot
-  include Mongoid::Document
+  include MongoidSetup
   include ApiAttributes
   field :name, type: String
   field :price, type: Float

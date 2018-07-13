@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Agent
-  include Mongoid::Document
+  include MongoidSetup
   field :name, type: String
   field :division, type: String
   field :level, type: Integer

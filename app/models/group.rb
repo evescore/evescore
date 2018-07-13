@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Group
-  include Mongoid::Document
+  include MongoidSetup
   field :name, type: String
   has_many :rats
   has_many :types

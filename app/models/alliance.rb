@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Alliance
-  include Mongoid::Document
+  include MongoidSetup
   field :name, type: String
   field :ticker, type: String
   has_many :corporations
