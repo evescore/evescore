@@ -3,14 +3,14 @@
     %tr
       %td{:rowspan => "2", :style => "width: 148px"}
         = character_image(@character.id)
-        = corporation_image(@character.corporation_id, 64)
+        = link_to corporation_image(@character.corporation_id, 64), corporation_path(@character.corporation_id)
       %td= @character.name
       %th.numeric Total ISK Earned
       %th.numeric Total Rat Kills
       %th.numeric Average Tick
       %th.numeric Favourite Faction
     %tr
-      %td= @character.corporation.name
+      %td= link_to @character.corporation.name, corporation_path(@character.corporation_id)
       %td.numeric= number_to_isk_short @character.total_isk
       %td.numeric= number_with_delimiter @character.total_kills
       %td.numeric= number_to_isk_short @character.average_tick

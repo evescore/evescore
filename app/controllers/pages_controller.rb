@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def stats; end
 
   def info; end
+
+  def changes
+    render html: Kramdown::Document.new(File.read('CHANGES.md'))
+  end
 end

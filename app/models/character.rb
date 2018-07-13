@@ -9,8 +9,8 @@ class Character
   field :refresh_token, type: String
   field :token_expires, type: Time
   field :display_option, type: String
-  belongs_to :corporation, optional: true
-  belongs_to :alliance, optional: true
+  belongs_to :corporation, optional: true, counter_cache: true
+  belongs_to :alliance, optional: true, counter_cache: true
   belongs_to :user, counter_cache: true
   has_many :wallet_records
   has_many :kills

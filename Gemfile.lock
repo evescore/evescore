@@ -164,6 +164,7 @@ GEM
     kaminari-mongoid (1.0.1)
       kaminari-core (~> 1.0)
       mongoid
+    kramdown (1.17.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.6.0)
@@ -374,6 +375,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   kaminari-mongoid
+  kramdown
   launchy
   letter_opener
   mongoid

@@ -44,8 +44,8 @@
       %tbody
         - @top_average_ticks.each do |record|
           %tr
-            %td= character_image(record['_id'], 32)
-            %td= Character.find(record['_id']).name
+            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
+            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
             %td.numeric= number_to_isk_short record['amount']
 .row
   .col-sm-4
@@ -141,8 +141,8 @@
       %tbody
         - @corporations_top_isk.each do |record|
           %tr
-            %td= corporation_image(record['_id'], 32)
-            %td= Corporation.find(record['_id']).name
+            %td= link_to corporation_image(record['_id'], 32), corporation_path(record['_id'])
+            %td= link_to Corporation.find(record['_id']).name, corporation_path(record['_id'])
             %td.numeric= number_to_isk_short record['amount']
   .col-sm-4
     %table.table.table-striped
@@ -157,6 +157,6 @@
       %tbody
         - @corporations_top_tax.each do |record|
           %tr
-            %td= corporation_image(record['_id'], 32)
-            %td= Corporation.find(record['_id']).name
+            %td= link_to corporation_image(record['_id'], 32), corporation_path(record['_id'])
+            %td= link_to Corporation.find(record['_id']).name, corporation_path(record['_id'])
             %td.numeric= number_to_isk_short record['tax']

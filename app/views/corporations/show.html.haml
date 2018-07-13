@@ -1,0 +1,53 @@
+%p#notice= notice
+
+%ol.breadcrumb
+  %li.breadcrumb-item
+    = link_to 'Welcome Page', root_path
+  %li.breadcrumb-item
+    = link_to 'Corporations', corporations_path
+  %li.breadcrumb-item.active= @corporation.name
+
+.panel.panel-default
+  .panel-body
+    .row
+      .col-sm-4
+        = corporation_image(@corporation.id, 128)
+        = alliance_image(@corporation.alliance_id, 128) if @corporation.alliance_id
+      .col-sm-8
+        %table.table
+          %tr
+            %th
+              Name
+            %td.numeric
+              = @corporation.name
+          - if @corporation.alliance_id
+            %tr
+              %th
+                Alliance
+              %td.numeric
+                = @corporation.alliance.name 
+          %tr
+            %th
+              Memebers on EVESCORE
+            %td.numeric
+              = @corporation.characters_count
+          %tr
+            %th
+              Total ISK
+            %td.numeric
+              - total_isk = @corporation.wallet_records.sum(:amount)
+              = number_to_isk_short(total_isk)
+              (
+              = number_to_isk(total_isk)
+              )
+          %tr
+            %th
+              Total Tax ISK
+            %td.numeric
+              - total_tax = @corporation.wallet_records.sum(:tax)
+              = number_to_isk_short(total_tax)
+              (
+              = number_to_isk(total_tax)
+              )
+          
+              

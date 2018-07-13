@@ -1,0 +1,23 @@
+%ol.breadcrumb
+  %li.breadcrumb-item
+    = link_to 'Welcome Page', root_path
+  %li.breadcrumb-item.active Corporations
+
+.panel.panel-default
+  .panel-heading
+    .panel-title Corporations
+  .panel-body
+    %table.table.table-condensed
+      %thead
+        %tr
+          %th Corporation Name
+          %th.numeric Character Count
+          %th
+
+      %tbody
+        - @corporations.each do |corporation|
+          %tr
+            %td= link_to corporation.name, corporation
+            %td.numeric= corporation.characters_count
+            %td
+    = paginate @corporations
