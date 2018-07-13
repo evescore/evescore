@@ -8,7 +8,6 @@ class WalletRecord
   field :amount, type: Float
   field :tax, type: Float
   field :type, type: String
-  field :ref_id, type: Integer
   field :mission_level, type: Integer
   index({ character_id: 1, ts: 1 }, unique: true, drop_dups: true)
   belongs_to :character
@@ -17,7 +16,7 @@ class WalletRecord
   belongs_to :agent, optional: true
   belongs_to :ded_site, optional: true
   has_many :kills, autosave: true
-  validates :ts, uniqueness: { scope: %i[character_id ref_id] }
+  validates :ts, uniqueness: { scope: %i[character_id ref_type] }
 
   scope :ded_sites, -> { where(:ded_site_id.ne => nil) }
   scope :missions, -> { where(:mission_level.ne => nil) }
@@ -37,7 +36,7 @@ class WalletRecord
   def self.create_from_api(character_id, user_id, wallet_record)
     record = new(
       amount: wallet_record.amount, tax: wallet_record.tax || 0, ts: wallet_record.date, date: wallet_record.date.to_date, user_id: user_id,
-      type: wallet_record.ref_type, ref_id: wallet_record.ref_id, character_id: character_id, agent_id: wallet_record.first_party_id,
+      type: wallet_record.ref_type, character_id: character_id, agent_id: wallet_record.first_party_id,
       mission_level: mission_level(wallet_record.first_party_id)
     )
     record.build_kills(wallet_record.reason)
