@@ -28,9 +28,11 @@ module Evescore
     # -- all .rb files in that directory are automatically loaded.
 
     # Don't generate system test files.
+    config.generators.stylesheets = false
+    config.generators.javascripts = false
     config.generators.system_tests = nil
     config.generators do |g|
-      g.test_framework :rspec, fixture: true
+      g.test_framework :rspec, fixture: true, view_specs: false, request_specs: false, routing_specs: false
       g.fixture_replacement :factory_bot, dir: 'spec/factories'
     end
     # Use a real queuing backend for Active Job (and separate queues per environment)
