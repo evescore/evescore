@@ -41,7 +41,7 @@ class User
   has_many :characters
   has_many :wallet_records
   has_many :kills
-  
+
   def self.update_counter_caches
     all.each do |user|
       user.characters_count = user.characters.count

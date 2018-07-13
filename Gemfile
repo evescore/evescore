@@ -7,6 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'awesome_print'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'capistrano'
 gem 'capistrano-rails'
@@ -41,7 +42,6 @@ group :test do
 end
 
 group :development, :test do
-  gem 'awesome_print'
   gem 'capybara', '~> 2.13'
   gem 'launchy'
   gem 'poltergeist'

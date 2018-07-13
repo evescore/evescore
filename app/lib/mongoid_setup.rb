@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MongoidSetup
   extend ActiveSupport::Concern
   include Mongoid::Document
