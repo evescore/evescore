@@ -17,5 +17,5 @@
         %td
           - record.kills.each do |kill|
             = kill_image(kill)
-        %td.numeric= number_to_isk record.amount
+        %td.numeric{ nowrap: :nowrap }= number_to_isk record.amount
 = paginate @ticks
