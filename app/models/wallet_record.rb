@@ -107,7 +107,7 @@ class WalletRecord
   end
 
   def self.corporations_top_tax(limit = nil)
-    query = public_records.ded_sites.group(_id: '$corporation_id', :tax.sum => '$tax').desc(:tax)
+    query = public_records.group(_id: '$corporation_id', :tax.sum => '$tax').desc(:tax)
     aggregate_public_top_pipeline(query, limit)
   end
 
