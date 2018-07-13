@@ -58,7 +58,8 @@ class WalletRecord
   end
 
   def check_ded_site_id(rat_id)
-    DedSite.where(boss_ids_array: { '$in' => [rat_id] }).first.id
+    site = DedSite.where(boss_ids_array: { '$in' => [rat_id] }).first
+    site ? site.id : nil
   end
 
   def kills_present?(text)
