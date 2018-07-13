@@ -8,6 +8,6 @@ class PagesController < ApplicationController
   def info; end
 
   def changes
-    render html: Kramdown::Document.new(File.read('CHANGES.md'))
+    render html: Kramdown::Document.new(File.read('CHANGES.md')).to_html.html_safe, layout: 'changelog'
   end
 end
