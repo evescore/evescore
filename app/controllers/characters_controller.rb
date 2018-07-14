@@ -3,6 +3,7 @@
 class CharactersController < AuthController
   before_action :set_character, except: %i[index]
   skip_before_action :authenticate_user!, if: :character_public?
+  before_action :check_owner, unless: :character_public?, except: :index
 
   DEFAULT_PER_PAGE = 10
 
@@ -45,8 +46,12 @@ class CharactersController < AuthController
 
   protected
 
+  def check_owner
+    current_user.characters.include?(@character) || redirect_to(root_path, notice: "You don't have access to this character")
+  end
+
   def set_character
-    @character = current_user.characters.find(params[:character_id].to_i)
+    @character = Character.find(params[:character_id].to_i)
   end
 
   def character_params

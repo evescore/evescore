@@ -1,3 +1,12 @@
+%p#notice= notice
+
+%ol.breadcrumb
+  %li.breadcrumb-item
+    = link_to 'Welcome Page', root_path
+  %li.breadcrumb-item
+    = link_to 'Mission Info', missions_path
+  %li.breadcrumb-item.active= @character.name
+
 .panel.panel-default
   .panel-heading
     %h3.panel-title Mission Info
@@ -8,9 +17,15 @@
           - 1.upto(5) do |level|
             %tr
               %td= mission_level_label(level)
-              %td= @character.wallet_records.where(mission_level: level, type: 'agent_mission_reward').count
+              %td.numeric= @character.wallet_records.where(mission_level: level, type: 'agent_mission_reward').count
       .col-sm-6
         %table.table
           %tr
             %th Total ISK from missions
-            %td= @character.wallet_records.where(:mission_level.ne => nil).sum(:amount)
+            %td.numeric= number_to_isk @character.wallet_records.where(:mission_level.ne => nil).sum(:amount)
+          %tr
+            %th Total ISK from mission completion
+            %td.numeric= number_to_isk @character.wallet_records.where(:mission_level.ne => nil, type: 'agent_mission_reward').sum(:amount)
+          %tr
+            %th Total ISK from mission completion time rewards
+            %td.numeric= number_to_isk @character.wallet_records.where(:mission_level.ne => nil, type: 'agent_mission_time_bonus_reward').sum(:amount)
