@@ -149,7 +149,7 @@ end
 
 def import_wallets
   User.all.each do |user|
-    user.characters.each do |character|
+    user.characters.without_test.each do |character|
       import_wallet(character)
     end
   end

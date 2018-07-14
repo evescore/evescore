@@ -16,6 +16,7 @@ class Character
   has_many :kills
 
   scope :public_characters, -> { where(display_option: 'Public') }
+  scope :without_test, -> { where(:id.nin => TEST_CHARS) }
 
   after_save :create_corporation
   after_create :queue_initial_import

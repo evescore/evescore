@@ -15,11 +15,14 @@ class WalletRecord
   belongs_to :user, optional: true
   belongs_to :agent, optional: true
   belongs_to :ded_site, optional: true
+
   has_many :kills, autosave: true
   validates :ts, uniqueness: { scope: %i[character_id ref_type] }
 
   scope :ded_sites, -> { where(:ded_site_id.ne => nil) }
   scope :missions, -> { where(:mission_level.ne => nil) }
+  scope :mission_rewards, -> { where(type: 'agent_mission_reward') }
+  scope :mission_time_bonus, -> { where(type: 'agent_mission_time_bonus_reward') }
 
   before_save :assign_corporation
 
