@@ -15,9 +15,7 @@ class AwardService
   end
 
   def call_award_method
-    tier = award.tier
-    tier = nil if tier.zero?
-    send((award.short_name + tier.to_s).to_sym)
+    send(award.short_name.to_sym)
   end
 
   def grant_award
