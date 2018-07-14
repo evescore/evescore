@@ -14,12 +14,21 @@ class Character
   belongs_to :user, counter_cache: true
   has_many :wallet_records
   has_many :kills
+  has_many :character_awards
 
   scope :public_characters, -> { where(display_option: 'Public') }
   scope :without_test, -> { where(:id.nin => TEST_CHARS) }
 
   after_save :create_corporation
   after_create :queue_initial_import
+
+  def award?(award_id)
+    character_awards.where(award_id: award_id).first || false
+  end
+
+  def awards
+    character_awards.map(&:award)
+  end
 
   def queue_initial_import
     CharacterWalletImportJob.perform_later(self)

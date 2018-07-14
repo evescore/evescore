@@ -111,3 +111,27 @@ th.numeric, td.numeric {
 .gist {
   font-size: 14px;
 }
+
+.award-inactive {
+  background-color: gray;
+}
+
+.award {
+  width: 48%;
+  margin: 10px;
+  border: 1px solid;
+}
+
+.award.text-muted > div > div > img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.award-active {
+  background-color: #3e444c;
+  border-color: #3e444c;
+}
+
+.award-active > div > div > h5 {
+  color: yellow;
+}

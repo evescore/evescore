@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 module ImageHelper
+  def award_icon(tier)
+    image_tag("awards/tier#{tier}")
+  end
+
   def icon_tag(icon, tooltip = nil)
     image_tag("#{icon}.png", { style: 'height: 32px' }.merge(tooltip(tooltip)))
   end

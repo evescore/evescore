@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'awards/:character_id', to: 'awards#show', as: :awards_path
   get 'missions', to: 'missions#index', as: :missions
   get 'missions/:id', to: 'missions#show', as: :mission
   get 'legal', to: 'pages#legal'

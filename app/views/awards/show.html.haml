@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title Awards
+  .panel-body
+    - Award.grouped.each do |group, awards|
+      %h4= group.upcase
+      - awards.sort_by { |a| a.tier }.each do |award|
+        .panel.award.col-sm-5{ class: @character.award?(award) ? 'award-active' : 'text-muted' }
+          .row
+            .col-sm-2
+              = award_icon(award.tier)
+            .col-sm-10
+              %h5= award.name
+              %p= award.description
