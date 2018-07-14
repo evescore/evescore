@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CharactersController < AuthController
-  before_action :set_character, except: %i[index]
+  before_action :set_character, except: :index
   skip_before_action :authenticate_user!, if: :character_public?
   before_action :check_owner, unless: :character_public?, except: :index
 
@@ -59,6 +59,7 @@ class CharactersController < AuthController
   end
 
   def character_public?
+    return if params[:action] == 'index'
     set_character.display_option == 'Public'
   end
 end
