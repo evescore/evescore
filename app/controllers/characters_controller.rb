@@ -46,7 +46,7 @@ class CharactersController < AuthController
   protected
 
   def set_character
-    @character = Character.find(params[:character_id].to_i)
+    @character = current_user.characters.find(params[:character_id].to_i)
   end
 
   def character_params

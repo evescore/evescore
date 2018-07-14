@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'missions', to: 'missions#index', as: :missions
+  get 'missions/:id', to: 'missions#show', as: :mission
   get 'legal', to: 'pages#legal'
   get 'stats', to: 'pages#stats'
   get 'info', to: 'pages#info'

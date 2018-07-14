@@ -1,0 +1,6 @@
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title Mission Info
+  .panel-body
+    - @characters.each do |character|
+      %p= link_to character.name, mission_path(character.id)
