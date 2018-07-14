@@ -3,7 +3,7 @@
 module ImageHelper
   def award_icon(award)
     return '' unless award.icon
-    image_tag("awards/#{award.icon}")
+    image_tag("awards/#{award.icon}.png")
   end
 
   def icon_tag(icon, tooltip = nil)
