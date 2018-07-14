@@ -28,3 +28,7 @@ end
 every 1.day do
   rake 'update:rats'
 end
+
+every 1.hour do
+  rake 'awards'
+end
