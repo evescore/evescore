@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 module ImageHelper
-  def award_icon(tier)
-    image_tag("awards/tier#{tier}")
+  def award_icon(award)
+    return '' unless award.icon
+    image_tag("awards/#{award.icon}")
   end
 
   def icon_tag(icon, tooltip = nil)

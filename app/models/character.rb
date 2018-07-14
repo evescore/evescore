@@ -47,4 +47,14 @@ class Character
       WalletRecord.create_from_api(id, user_id, wallet_record)
     end
   end
+
+  def grant_awards
+    Award.all.each do |award|
+      AwardService.new(self, award).check
+    end
+  end
+
+  def faction_rat_kills(faction_id)
+    kills.where(:rat_id.in => Rat.where(:group_id.in => Faction.find(faction_id).groups.where(name: /Commander/).map(&:id)).map(&:id))
+  end
 end

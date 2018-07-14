@@ -8,10 +8,11 @@ class Award
   field :category, type: String
   field :tier, type: Integer
   field :description, type: String
+  field :icon, type: String
 
   validates :name, uniqueness: { scope: %i[category tier] }
 
   def self.grouped
-    all.to_a.group_by(&:category)
+    all.to_a.group_by(&:category).sort
   end
 end

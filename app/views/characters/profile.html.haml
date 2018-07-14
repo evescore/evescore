@@ -1,3 +1,10 @@
+%p#notice= notice
+
+%ol.breadcrumb
+  %li.breadcrumb-item
+    = link_to 'Welcome Page', root_path
+  %li.breadcrumb-item.active= @character.name
+
 .panel.panel-default
   %table.table.table-striped.table-rounded
     %tr
@@ -25,6 +32,13 @@
       %th.numeric Favourite DED Site
     %tr
       %td{:colspan => "2"}
+        = image_tag('awards/tier4', style: 'height: 32px')
+        = link_to awards_path(@character), class: 'btn btn-sm' do
+          .label.label-success
+            NEW!
+          &nbsp;
+          Awards
+          
       %td.numeric= number_with_delimiter @character.missions_run
       %td.numeric= mission_level_label @character.favourite_mission_level
       %td.numeric= number_with_delimiter @character.ded_sites_run
