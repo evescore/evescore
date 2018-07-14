@@ -1,0 +1,121 @@
+---
+- name: I need a dollar dollar, a dollar is what I need
+  short_name: isk_amount3
+  tier: 3
+  category: ISK
+  description: Earn 5,000,000,000 ISK
+  icon: silver
+- name: Working 9 to 5 ...
+  short_name: isk_amount4
+  tier: 4
+  category: ISK
+  description: Earn 10,000,000,000 ISK
+  icon: gold
+- name: This is starting to make cents
+  short_name: isk_amount2
+  tier: 2
+  category: ISK
+  description: Earn 2,500,000,000 ISK
+  icon: bronze
+- name: Money for nothin' and chicks for free
+  short_name: isk_amount1
+  tier: 1
+  category: ISK
+  description: Earn 1,000,000,000 ISK
+  icon: copper
+- name: Rat Patrol
+  short_name: rat_amount1
+  tier: 1
+  category: NPC Kills
+  description: Kill 10,000 NPCs
+  icon: copper
+- name: Somebody call for an exterminator?
+  short_name: rat_amount2
+  tier: 2
+  category: NPC Kills
+  description: Kill 25,000 NPCs
+  icon: bronze
+- name: Ratatouille
+  short_name: rat_amount4
+  tier: 4
+  category: NPC Kills
+  description: Kill 100,000 NPCs
+  icon: gold
+- name: Rat Race
+  short_name: rat_amount3
+  tier: 3
+  category: NPC Kills
+  description: Kill 50,000 NPCs
+  icon: silver
+- name: Scaring the nation with their guns and ammunition
+  short_name: faction_sansha
+  category: NPC Kills (Faction)
+  description: Kill a commander of Sansha's Nation
+  icon: sansha
+  tier: 0
+- name: Eh, What's up Doc?
+  short_name: faction_guristas
+  category: NPC Kills (Faction)
+  description: Kill a commander of Guristas
+  icon: guristas
+  tier: 0
+- name: With blood and rage of crimson red
+  short_name: faction_blood_raiders
+  category: NPC Kills (Faction)
+  description: Kill a commander of the Blood Raider Covenant
+  icon: blood_raiders
+  tier: 0
+- name: Angels in the Outfield
+  short_name: faction_angel_cartel
+  category: NPC Kills (Faction)
+  description: Kill a commander of the Angel Cartel
+  icon: angel_cartel
+  tier: 0
+- name: I'm gonna need you to come in on Saturday
+  short_name: faction_serpentis
+  category: NPC Kills (Faction)
+  description: Kill a commander of the Serpentis Corporation
+  icon: serpentis
+  tier: 0
+- name: Travel to exotic places, meet new and exciting people
+  short_name: faction_all
+  category: NPC Kills (Faction)
+  description: Kill a commander of every pirate faction
+  icon: gold
+  tier: 0
+- name: Fear God ...
+  short_name: capitals_dreadnought
+  category: NPC Kills (Ship Types)
+  description: Destroy an NPC Dreadnought
+  icon: copper
+  tier: 2
+- name: "... And Dread Nought"
+  short_name: capitals_faction_dreadnought
+  category: NPC Kills (Ship Types)
+  description: Destroy an NPC Faction Dreadnought
+  icon: bronze
+  tier: 3
+- name: We've gone and got a bigger ship
+  short_name: capitals_titan
+  category: NPC Kills (Ship Types)
+  description: Destroy an NPC Faction Titan
+  icon: gold
+  tier: 4
+- name: Eastbound and Down
+  short_name: rat_hauler
+  category: NPC Kills (Ship Types)
+  description: Destroy an NPC Hauler
+  icon: copper
+  tier: 1
+- name: "... What a way to make a living"
+  short_name: isk_amount5
+  category: ISK
+  tier: 5
+  description: Earn 25,000,000,000 ISK
+  icon: gold
+- name: Greed, for lack of a better word, is good
+  short_name: isk_amount6
+  category: ISK
+  tier: 6
+  description: Earn 50,000,000,000 ISK
+  icon: gold
