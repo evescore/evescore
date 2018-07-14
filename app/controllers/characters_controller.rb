@@ -59,7 +59,6 @@ class CharactersController < AuthController
   end
 
   def character_public?
-    return false if params[:action] == 'index'
     set_character.display_option == 'Public'
   end
 end
