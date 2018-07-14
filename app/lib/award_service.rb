@@ -15,7 +15,9 @@ class AwardService
   end
 
   def call_award_method
-    send((award.short_name + award.tier.to_s).to_sym)
+    tier = award.tier
+    tier = nil if tier.zero?
+    send((award.short_name + tier.to_s).to_sym)
   end
 
   def grant_award
@@ -54,6 +56,14 @@ class AwardService
     @character.wallet_records.sum(:amount) >= 10_000_000_000
   end
 
+  def isk_amount5
+    @character.wallet_records.sum(:amount) >= 25_000_000_000
+  end
+
+  def isk_amount6
+    @character.wallet_records.sum(:amount) >= 50_000_000_000
+  end
+
   def faction_sansha
     @character.faction_rat_kills(500_019).count.positive?
   end
@@ -76,5 +86,26 @@ class AwardService
 
   def faction_all
     @character.awards.select { |a| a.category == 'factions' }.count >= 5
+  end
+
+  def capitals_dreadnought
+    match = ['Angel Dreadnought', 'Blood Dreadnought', 'Guristas Dreadnought', "Sansha's Dreadnought", 'Serpentis Dreadnought']
+    @character.kills.where(:rat_id.in => Rat.where(:name.in => match).map(&:id)).count.positive?
+  end
+
+  def capitals_faction_dreadnought
+    match = ['Domination Dreadnought', 'Dark Blood Dreadnought', 'Dread Guristas Dreadnought', "True Sansha's Dreadnought", 'Shadow Serpentis Dreadnought']
+    @character.kills.where(:rat_id.in => Rat.where(:name.in => match).map(&:id)).count.positive?
+  end
+
+  def capitals_titan
+    match = ['Domination Titan', 'Dark Blood Titan', 'Dread Guristas Titan', 'Shadow Serpentis Titan']
+    @character.kills.where(:rat_id.in => Rat.where(:name.in => match).map(&:id)).count.positive?
+  end
+
+  def rat_hauler
+    match = ['Asteroid Angel Cartel Hauler', 'Asteroid Blood Raiders Hauler', 'Asteroid Guristas Hauler', "Asteroid Sansha's Nation Hauler", 'Asteroid Serpentis Hauler', 'Asteroid Rogue Drone Hauler']
+    rat_ids = Rat.where(:group_id.in => Group.where(:name.in => match).map(&:id)).map(&:id)
+    @character.kills.where(:rat_id.in => rat_ids).count.positive?
   end
 end
