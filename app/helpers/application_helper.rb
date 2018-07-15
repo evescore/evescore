@@ -78,6 +78,8 @@ module ApplicationHelper
 
   def record_details(record)
     case record.type
+    when 'bounty_prize'
+      concat content_tag(:span, 'ESS', class: 'label label-warn')
     when 'bounty_prizes'
       concat content_tag(:span, 'Bounty', class: 'label label-primary')
       ded_site?(record.ded_site)

@@ -30,6 +30,7 @@ class WalletRecord
     agent_mission_time_bonus_reward
     agent_mission_reward
     bounty_prizes
+    bounty_prize
   ].freeze
 
   def self.importable?(type)
