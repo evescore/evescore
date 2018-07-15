@@ -1,0 +1,17 @@
+%table.table.table-striped
+  %caption
+    = caption || ''
+    - more ||= false
+    - if more
+      %span.pull-right= link_to 'More', character_ticks_path(@character)
+  %thead
+    %tr
+      %th.icon
+      %th Timestamp
+      %th.numeric Amount
+  %tbody
+    - @top_ticks.each do |record|
+      %tr
+        %td= record_icon(record)
+        %td= link_to record.ts, global_tick_path(record)
+        %td.numeric= number_to_isk record.amount

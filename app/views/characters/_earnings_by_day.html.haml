@@ -1,0 +1,17 @@
+%table.table.table-striped
+  %caption
+    = caption || ''
+    - more ||= false
+    - if more
+      %span.pull-right= link_to 'More', character_earnings_path(@character)
+  %thead
+    %tr
+      %th.icon
+      %th Date
+      %th.numeric Amount
+  %tbody
+    - @earnings_by_day.each do |record|
+      %tr
+        %td= isk_image
+        %td= record['date'].to_date.to_s
+        %td.numeric= number_to_isk record['amount']

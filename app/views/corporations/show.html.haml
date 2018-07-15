@@ -50,4 +50,12 @@
               = number_to_isk(total_tax)
               )
           
+%table.table
+  %tr
+    %th Members
+  - @corporation.characters.public_characters.each do |character|
+    %tr
+      %td
+        = link_to character_image(character.id, 32), character_profile_path(character)
+        = link_to character.name, character_profile_path(character)
               

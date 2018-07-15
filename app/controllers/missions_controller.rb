@@ -2,6 +2,7 @@
 
 class MissionsController < AuthController
   before_action :set_character, except: %i[index]
+  skip_before_action :authenticate_user!, if: :character_public?, except: :index
   before_action :check_owner, unless: :character_public?, except: :index
 
   def index

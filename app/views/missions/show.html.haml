@@ -6,10 +6,14 @@
   %li.breadcrumb-item
     = link_to 'Mission Info', missions_path
   %li.breadcrumb-item.active= @character.name
+  .pull-right
+    = link_to 'Character Profile', character_profile_path(@character)
+
 
 .panel.panel-default
   .panel-heading
-    %h3.panel-title Mission Info
+    %h3.panel-title 
+      Mission Info
   .panel-body
     .row
       .col-sm-6

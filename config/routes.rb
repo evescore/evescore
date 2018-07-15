@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   delete 'characters/:character_id/destroy', to: 'characters#destroy', as: :character_destroy
   patch 'characters/:character_id/display_option', to: 'characters#display_option', as: :character
   get 'ticks', to: 'welcome#ticks', as: :global_ticks
+  get 'ticks/:tick_id', to: 'welcome#tick', as: :global_tick
   get 'average_ticks', to: 'welcome#average_ticks', as: :average_ticks
   get 'isk', to: 'welcome#isk', as: :isk
 

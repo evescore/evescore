@@ -35,7 +35,7 @@
     %table.table.table-striped
       %caption
         Top 5 Average Ticks
-        %span.pull-right= link_to 'More', '#'
+        %span.pull-right= link_to 'More', average_ticks_path
       %thead
         %tr
           %th.icon
@@ -47,55 +47,6 @@
             %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
             %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
             %td.numeric= number_to_isk_short record['amount']
-.row
-  .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total DED Sites Completed
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @public_top_ded_sites.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_with_delimiter record['count']
-  .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total Missions Completed
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @public_top_missions.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_with_delimiter record['count']
-  .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total Rat Kills
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @public_top_kills.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_with_delimiter record['amount']
 .row
   .col-sm-4
     %table.table.table-striped
@@ -164,3 +115,52 @@
             %td= link_to corporation_image(corporation.id, 32), corporation_path(corporation)
             %td= link_to corporation.name, corporation_path(corporation)
             %td.numeric= number_to_isk_short record['tax']
+.row
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Top 5 Total DED Sites Completed
+        %span.pull-right= link_to 'More', '#'
+      %thead
+        %tr
+          %th.icon
+          %th Character
+          %th.numeric Amount
+      %tbody
+        - @public_top_ded_sites.each do |record|
+          %tr
+            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
+            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
+            %td.numeric= number_with_delimiter record['count']
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Top 5 Total Missions Completed
+        %span.pull-right= link_to 'More', '#'
+      %thead
+        %tr
+          %th.icon
+          %th Character
+          %th.numeric Amount
+      %tbody
+        - @public_top_missions.each do |record|
+          %tr
+            %td= link_to character_image(record['_id'], 32), mission_path(record['_id'])
+            %td= link_to Character.find(record['_id']).name, mission_path(record['_id'])
+            %td.numeric= number_with_delimiter record['count']
+  .col-sm-4
+    %table.table.table-striped
+      %caption
+        Top 5 Total Rat Kills
+        %span.pull-right= link_to 'More', '#'
+      %thead
+        %tr
+          %th.icon
+          %th Character
+          %th.numeric Amount
+      %tbody
+        - @public_top_kills.each do |record|
+          %tr
+            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
+            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
+            %td.numeric= number_with_delimiter record['amount']
