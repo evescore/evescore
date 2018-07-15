@@ -45,7 +45,7 @@ module ApplicationHelper
 
   def record_icon(record)
     case record.type
-    when 'bounty_prizes'
+    when /bounty_prize/
       corporation_image(1_000_125, 32, tooltip('CONCORD'))
     when 'agent_mission_reward', 'agent_mission_time_bonus_reward'
       options = tooltip Corporation.find(record.agent.corporation_id).name
