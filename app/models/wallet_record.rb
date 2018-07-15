@@ -38,6 +38,7 @@ class WalletRecord
   end
 
   def self.create_from_api(character_id, user_id, wallet_record)
+    return if wallet_record.ref_type == 'bounty_prize' && !wallet_record.description.match(/got paid bounty$/)
     record = new(
       amount: wallet_record.amount, tax: wallet_record.tax || 0, ts: wallet_record.date, date: wallet_record.date.to_date, user_id: user_id,
       type: wallet_record.ref_type, character_id: character_id, agent_id: wallet_record.first_party_id,
