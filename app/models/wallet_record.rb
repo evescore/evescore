@@ -17,7 +17,7 @@ class WalletRecord
   belongs_to :ded_site, optional: true
 
   has_many :kills, autosave: true
-  validates :ts, uniqueness: { scope: %i[character_id ref_type] }
+  validates :ts, uniqueness: { scope: %i[character_id type amount] }
 
   scope :ded_sites, -> { where(:ded_site_id.ne => nil) }
   scope :missions, -> { where(:mission_level.ne => nil) }
