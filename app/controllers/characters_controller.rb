@@ -15,7 +15,7 @@ class CharactersController < AuthController
     @ticks = @character.wallet_records.order('ts desc').limit(5)
     @earnings_by_day = @character.earnings_by_day(5)
     @valuable_rats = @character.kills_by_bounty(5)
-    @top_ticks = @character.wallet_records.order('amount desc').limit(5)
+    @top_ticks = @character.wallet_records.top_ticks.limit(5)
   end
 
   def earnings

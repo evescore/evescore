@@ -24,10 +24,6 @@ class WelcomeController < ApplicationController
   end
 
   def average_ticks
-    @top_ticks = WalletRecord.public_top_average_ticks.page(params[:page]).per(DEFAULT_PER_PAGE)
-  end
-
-  def average_ticks
     @top_ticks = Kaminari.paginate_array(WalletRecord.public_top_average_ticks.to_a).page(params[:page]).per(DEFAULT_PER_PAGE)
   end
 

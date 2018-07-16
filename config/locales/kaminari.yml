@@ -1,7 +1,7 @@
 en:
   views:
     pagination:
-      next: ›
-      last: »
-      previous: ‹
-      first: «
+      next: Next →
+      last: Last »
+      previous: ← Prev
+      first: « First

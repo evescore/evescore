@@ -23,6 +23,7 @@ class WalletRecord
   scope :missions, -> { where(:mission_level.ne => nil) }
   scope :mission_rewards, -> { where(type: 'agent_mission_reward') }
   scope :mission_time_bonus, -> { where(type: 'agent_mission_time_bonus_reward') }
+  scope :top_ticks, -> { where(:type.ne => 'bounty_prize').order('amount desc') }
 
   before_save :assign_corporation
 
