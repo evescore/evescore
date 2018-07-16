@@ -1,0 +1,7 @@
+%ol.breadcrumb
+  - crumbs.each do |crumb|
+    - if crumbs.last == crumb
+      %li.breadcrumb-item.active= crumb
+    - else
+      %li.breadcrumb-item
+        = crumb

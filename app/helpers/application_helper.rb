@@ -43,13 +43,13 @@ module ApplicationHelper
     number_to_human amount, units: { unit: ' ISK', thousand: 'K ISK', million: 'M ISK', billion: 'b ISK' }, format: '%n%u'
   end
 
-  def record_icon(record)
+  def record_icon(record, size = 32)
     case record.type
     when /bounty_prize/
-      corporation_image(1_000_125, 32, tooltip('CONCORD'))
+      corporation_image(1_000_125, size, tooltip('CONCORD'))
     when 'agent_mission_reward', 'agent_mission_time_bonus_reward'
       options = tooltip Corporation.find(record.agent.corporation_id).name
-      corporation_image(record.agent.corporation_id, 32, options)
+      corporation_image(record.agent.corporation_id, size, options)
     end
   end
 

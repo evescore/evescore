@@ -1,11 +1,6 @@
 %p#notice= notice
 
-%ol.breadcrumb
-  %li.breadcrumb-item
-    = link_to 'Welcome Page', root_path
-  %li.breadcrumb-item
-    = link_to 'Corporations', corporations_path
-  %li.breadcrumb-item.active= @corporation.name
+= breadcrumbs(welcome_page_link, corporations_link, @corporation.name)
 
 .panel.panel-default
   .panel-body

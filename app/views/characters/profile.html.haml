@@ -1,9 +1,6 @@
 %p#notice= notice
 
-%ol.breadcrumb
-  %li.breadcrumb-item
-    = link_to 'Welcome Page', root_path
-  %li.breadcrumb-item.active= @character.name
+= breadcrumbs welcome_page_link, @character.name
 
 .panel.panel-default
   %table.table.table-striped.table-rounded

@@ -35,7 +35,7 @@ class WelcomeController < ApplicationController
     @top_isk = Kaminari.paginate_array(WalletRecord.public_top_isk.to_a).page(params[:page]).per(DEFAULT_PER_PAGE)
     head :ok
   end
-  
+
   def tick
     @tick = WalletRecord.public_records.find(params[:tick_id])
   end

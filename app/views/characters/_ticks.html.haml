@@ -1,0 +1,25 @@
+%table.table.table-striped
+  %caption
+    = caption ||= ''
+    - more ||= false
+    - if more 
+      %span.pull-right= link_to 'More', character_journal_path(@character)
+    
+  %thead
+    %tr
+      %th.icon
+      %th.timestamp Timestamp
+      %th.details Details
+      %th
+      %th.numeric Amount
+  %tbody
+    - @ticks.each do |record|
+      %tr
+        %td= record_icon(record)
+        %td
+          = link_to record.ts, global_tick_path(record)
+        %td= record_details(record)
+        %td
+          - record.kills.each do |kill|
+            = kill_image(kill)
+        %td.numeric{ nowrap: :nowrap }= number_to_isk record.amount

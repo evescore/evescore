@@ -1,11 +1,5 @@
 %p#notice= notice
 
-%ol.breadcrumb
-  %li.breadcrumb-item
-    = link_to 'Welcome Page', root_path
-  %li.breadcrumb-item.active
-    = link_to @character.name, character_profile_path(@character)
-  %li.breadcrumb-item.active Top Ticks
-
+= breadcrumbs welcome_page_link, character_link(@character), 'Top Ticks'
 = render :partial => 'top_ticks', locals: { caption: 'Top Ticks' }
 = paginate @top_ticks

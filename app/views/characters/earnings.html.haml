@@ -1,2 +1,5 @@
+%p#notice= notice
+
+= breadcrumbs welcome_page_link, character_link(@character), 'Earnings'
 = render partial: 'earnings_by_day', locals: { caption: 'Earnings' }
 = paginate @earnings_by_day

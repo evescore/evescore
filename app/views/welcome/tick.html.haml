@@ -1,0 +1,54 @@
+= breadcrumbs welcome_page_link, character_link(@tick.character), character_ticks_link(@tick.character), @tick.ts
+
+.panel.panel-default
+  .panel-heading
+    .row
+      .col-sm-2
+        = character_image_link(@tick.character_id, 64)
+        = corporation_image_link(@tick.character.corporation, 64)
+      .col-sm-4
+        = character_link @tick.character
+        %br
+        = corporation_link @tick.character.corporation
+        %br
+        = @tick.ts
+      .col-sm-2.numeric
+        GROSS AMOUNT
+        %h4=number_to_isk @tick.tax + @tick.amount
+      .col-sm-2.numeric
+        TAX
+        %h4=number_to_isk @tick.tax
+      .col-sm-2.numeric
+        NET AMOUNT
+        %h4=number_to_isk @tick.amount
+  .panel-body
+    - if @tick.type != 'bounty_prizes'
+      = record_icon(@tick, 64)
+      = record_details(@tick)
+    - if !@tick.kills.empty?
+      %table.table.table-condensed
+        %tr
+          %th Amount
+          %th Rat Name
+          %th Group Name
+          %th.numeric Bounty
+        - @tick.kills.each do |kill|
+          %tr
+            %td= kill.amount
+            %td
+              = rat_image_link(kill.rat.id)
+              &nbsp;
+              = rat_link kill.rat
+            %td
+              = kill.rat.group.name
+            %td.numeric
+              = number_to_isk kill.rat.bounty
+        %tr
+          %th 
+          %th
+          %th.numeric
+            NET
+            = number_to_isk @tick.amount
+          %th.numeric= number_to_isk @tick.kills.map { |k| k.rat.bounty * k.amount }.sum
+              
+      
