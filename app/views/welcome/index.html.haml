@@ -1,166 +1,25 @@
 .row
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total ISK Earned
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @top_isk.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_to_isk_short record['amount']
+    / = render :partial => 'top_isk', locals: { caption: 'Top 5 Total ISK Earned', more: true, subject: 'Character', value: 'Amount'}
+    / = render :partial => 'shared/top_table', object: @top_isk, locals: { caption: 'Top 5 Total ISK Earned', more: true, subject: 'Character', value: 'Amount', subject_image_link: :character_image_link, subject_field: '_id', value_field: 'amount', subject_link: :character_link, value_display: :number_to_isk_short}
+    = top_table(@top_isk, caption: 'Top 5 Total ISK Earned', more: isk_path, subject: :character, value: :amount, subject_field: '_id', value_field: 'amount', value_display: :number_to_isk_short)
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Ticks
-        %span.pull-right= link_to 'More', global_ticks_path
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @top_ticks.each do |record|
-          %tr
-            %td= link_to character_image(record['character_id'], 32), character_profile_path(record['character_id'])
-            %td= link_to Character.find(record['character_id']).name, character_profile_path(record['character_id'])
-            %td.numeric= number_to_isk_short record['amount']
+    = top_table(@top_ticks, caption: 'Top 5 Ticks', more: global_ticks_path, subject: :character, value: :amount, subject_field: 'character_id', value_field: 'amount', value_display: :number_to_isk_short)
+    / = render :partial => 'top_ticks', locals: { caption: 'Top 5 Ticks', more: true, subject: 'Character', value: 'Amount' }
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Average Ticks
-        %span.pull-right= link_to 'More', average_ticks_path
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @top_average_ticks.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_to_isk_short record['amount']
+    = top_table(@top_average_ticks, caption: 'Top 5 Average Ticks', more: global_ticks_path, subject: :character, value: :amount, subject_field: '_id', value_field: 'amount', value_display: :number_to_isk_short)
+    / = render :partial => 'top_average_ticks', locals: { caption: 'Top 5 Average Ticks', more: true, subject: 'Character', value: 'Amount' }
 .row
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Global
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Feat
-          %th.numeric Value
-      %tbody
-        %tr
-          %td= isk_image
-          %td Total ISK
-          %td.numeric= number_to_isk @total_isk
-        %tr
-          %td= isk_image
-          %td Total Tax
-          %td.numeric= number_to_isk @total_tax
-        %tr
-          %td= icon_tag(:skull)
-          %td Total Kills
-          %td.numeric= number_with_delimiter @total_kills
-        %tr
-          %td= corporation_image(1000137)
-          %td DED Sites Completed
-          %td.numeric= number_with_delimiter @total_ded_sites
-        %tr
-          %td= icon_tag(:lp)
-          %td Missions Completed
-          %td.numeric= number_with_delimiter @total_missions
+    / = render :partial => 'global_summary'
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total ISK Earned (Corporations)
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Corporation
-          %th.numeric Amount
-      %tbody
-        - @corporations_top_isk.each do |record|
-          - corporation = Corporation.find(record['_id'])
-          - next if corporation.private?
-          %tr
-            %td= link_to corporation_image(record['_id'], 32), corporation_path(corporation)
-            %td= link_to corporation.name, corporation_path(corporation)
-            %td.numeric= number_to_isk_short record['amount']
+    / = render :partial => 'top_isk_corporations', locals: { caption: 'Top 5 Total ISK Earned (Corporations)', more: true }
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total Tax Collected
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Corporation
-          %th.numeric Amount
-      %tbody
-        - @corporations_top_tax.each do |record|
-          - corporation = Corporation.find(record['_id'])
-          - next if corporation.private?
-          %tr
-            %td= link_to corporation_image(corporation.id, 32), corporation_path(corporation)
-            %td= link_to corporation.name, corporation_path(corporation)
-            %td.numeric= number_to_isk_short record['tax']
+    / = render :partial => 'top_tax_corporations'
 .row
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total DED Sites Completed
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @public_top_ded_sites.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_with_delimiter record['count']
+    / = render :partial => 'top_ded_sites'
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total Missions Completed
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @public_top_missions.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_with_delimiter record['count']
+    / = render :partial => 'top_missions'
   .col-sm-4
-    %table.table.table-striped
-      %caption
-        Top 5 Total Rat Kills
-        %span.pull-right= link_to 'More', '#'
-      %thead
-        %tr
-          %th.icon
-          %th Character
-          %th.numeric Amount
-      %tbody
-        - @public_top_kills.each do |record|
-          %tr
-            %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-            %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-            %td.numeric= number_with_delimiter record['amount']
+    / = render :partial => 'top_rat_kills'

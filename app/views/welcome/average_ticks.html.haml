@@ -1,16 +1,3 @@
 = breadcrumbs welcome_page_link, 'Top Average Ticks'
-
-%table.table.table-striped
-  %caption Top Average Ticks
-  %thead
-    %tr
-      %th.icon
-      %th Character
-      %th.numeric Amount
-  %tbody
-    - @top_ticks.each do |record|
-      %tr
-        %td.icon=link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
-        %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
-        %td.numeric= number_to_isk record['amount']
-= paginate @top_ticks
+= render partial: 'top_average_ticks', locals: { caption: 'Top Average Ticks', subject: 'Character', value: 'Amount' }
+= paginate @top_average_ticks

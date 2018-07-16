@@ -1,0 +1,15 @@
+%table.table.table-striped
+  = top_table_caption(caption, corporations_isk_path, more ||= false)
+  %thead
+    %tr
+      %th.icon
+      %th Corporation
+      %th.numeric Amount
+  %tbody
+    - @corporations_top_isk.each do |record|
+      - corporation = Corporation.find(record['_id'])
+      - next if corporation.private?
+      %tr
+        %td= link_to corporation_image(record['_id'], 32), corporation_path(corporation)
+        %td= link_to corporation.name, corporation_path(corporation)
+        %td.numeric= number_to_isk_short record['amount']

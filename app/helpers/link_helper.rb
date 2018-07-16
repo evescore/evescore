@@ -6,6 +6,7 @@ module LinkHelper
   end
 
   def character_link(character, options = {})
+    character = Character.find(character) unless character.is_a?(Character)
     link_to character.name, character_profile_path(character), options
   end
 

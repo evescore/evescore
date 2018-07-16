@@ -24,12 +24,15 @@ class WelcomeController < ApplicationController
   end
 
   def average_ticks
-    @top_ticks = Kaminari.paginate_array(WalletRecord.public_top_average_ticks.to_a).page(params[:page]).per(DEFAULT_PER_PAGE)
+    @top_average_ticks = Kaminari.paginate_array(WalletRecord.public_top_average_ticks.to_a).page(params[:page]).per(DEFAULT_PER_PAGE)
   end
 
   def isk
     @top_isk = Kaminari.paginate_array(WalletRecord.public_top_isk.to_a).page(params[:page]).per(DEFAULT_PER_PAGE)
-    head :ok
+  end
+
+  def isk_corporations
+    @corporations_top_isk = Kaminari.paginate_array(WalletRecord.corporations_top_isk.to_a).page(params[:page]).per(DEFAULT_PER_PAGE)
   end
 
   def tick

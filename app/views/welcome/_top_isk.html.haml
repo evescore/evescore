@@ -1,0 +1,6 @@
+%table.table.table-striped
+  = top_table_caption(caption, isk_path, more ||= false)
+  = top_table_head(subject, value)
+  %tbody
+    - collection.each do |record|
+      = top_table_row(record, subject_image_link: subject_image_link, subject_field: subject_field, value_field: value_field, subject_link: subject_link, value_display: value_display)

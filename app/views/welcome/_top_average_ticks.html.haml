@@ -1,0 +1,9 @@
+%table.table.table-striped
+  = top_table_caption(caption, average_ticks_path, more ||= false)
+  = top_table_head(subject, value)
+  %tbody
+    - @top_average_ticks.each do |record|
+      %tr
+        %td= link_to character_image(record['_id'], 32), character_profile_path(record['_id'])
+        %td= link_to Character.find(record['_id']).name, character_profile_path(record['_id'])
+        %td.numeric= number_to_isk_short record['amount']

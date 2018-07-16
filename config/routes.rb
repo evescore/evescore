@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get 'ticks/:tick_id', to: 'welcome#tick', as: :global_tick
   get 'average_ticks', to: 'welcome#average_ticks', as: :average_ticks
   get 'isk', to: 'welcome#isk', as: :isk
+  get 'isk_corporations', to: 'welcome#isk_corporations', as: :corporations_isk
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'welcome#index'
