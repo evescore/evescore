@@ -38,7 +38,7 @@ module TableHelper
 
   def top_table_row(record, options = {})
     size = options[:size] || 32
-    spo icon = content_tag(:td, send(options[:subject_image_link], record[options[:subject_field]], size))
+    icon = content_tag(:td, send(options[:subject_image_link], record[options[:subject_field]], size))
     subject = content_tag(:td, send(options[:subject_link], record[options[:subject_field]]))
     value = content_tag(:td, send(options[:value_display], record[options[:value_field]]), class: 'numeric')
     content_tag(:tr, icon + subject + value)
