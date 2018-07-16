@@ -6,12 +6,21 @@ module TableHelper
   end
 
   def top_table_locals(options)
+    options = top_table_default_locals(options)
     {
       caption: options[:caption], more: options[:more], subject: options[:subject].capitalize,
       value: options[:value].capitalize, subject_image_link: top_table_image_link(options[:subject]),
       subject_field: options[:subject_field], value_field: options[:value_field],
       subject_link: top_table_link(options[:subject]), value_display: options[:value_display]
     }
+  end
+
+  def top_table_default_locals(options)
+    options[:subject] ||= :character
+    options[:value_display] ||= :number_to_isk_short
+    options[:value] ||= :amount
+    options[:value_field] ||= 'amount'
+    options
   end
 
   def top_table_link(symbol)

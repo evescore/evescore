@@ -1,3 +1,3 @@
 = breadcrumbs welcome_page_link, 'Top ISK'
-= render partial: 'top_isk', locals: { caption: 'Top ISK', subject: 'Character', value: 'Amount' }
+= top_table(@top_isk, caption: 'Top 5 Total ISK Earned', more: isk_path, subject_field: '_id')
 = paginate @top_isk

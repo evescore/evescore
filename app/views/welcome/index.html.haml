@@ -1,21 +1,21 @@
 .row
   .col-sm-4
-    = top_table(@top_isk, caption: 'Top 5 Total ISK Earned', more: isk_path, subject: :character, value: :amount, subject_field: '_id', value_field: 'amount', value_display: :number_to_isk_short)
+    = top_table(@top_isk, caption: 'Top 5 Total ISK Earned', more: isk_path, subject_field: '_id')
   .col-sm-4
-    = top_table(@top_ticks, caption: 'Top 5 Ticks', more: global_ticks_path, subject: :character, value: :amount, subject_field: 'character_id', value_field: 'amount', value_display: :number_to_isk_short)
+    = top_table(@top_ticks, caption: 'Top 5 Ticks', more: global_ticks_path, subject_field: 'character_id')
   .col-sm-4
-    = top_table(@top_average_ticks, caption: 'Top 5 Average Ticks', more: global_ticks_path, subject: :character, value: :amount, subject_field: '_id', value_field: 'amount', value_display: :number_to_isk_short)
+    = top_table(@top_average_ticks, caption: 'Top 5 Average Ticks', more: average_ticks_path, subject_field: '_id')
 .row
   .col-sm-4
     = render :partial => 'global_summary'
   .col-sm-4
-    / = render :partial => 'top_isk_corporations', locals: { caption: 'Top 5 Total ISK Earned (Corporations)', more: true }
+    = top_table(@corporations_top_isk, caption: 'Top 5 Total ISK Earned (Corporations)', subject_field: '_id', subject: :corporation)
   .col-sm-4
-    / = render :partial => 'top_tax_corporations'
+    = top_table(@corporations_top_tax, caption: 'Top 5 Total Tax Collected (Corporations)', value_field: 'tax', subject_field: '_id', subject: :corporation)
 .row
   .col-sm-4
-    / = render :partial => 'top_ded_sites'
+    = top_table(@public_top_ded_sites, caption: 'Top 5 Total DED Sites Completed', more: false, value_field: 'count', subject_field: '_id', value_display: :number_with_delimiter)
   .col-sm-4
-    / = render :partial => 'top_missions'
+    = top_table(@public_top_missions, caption: 'Top 5 Total Missions Completed', more: false, value_field: 'count', subject_field: '_id', value_display: :number_with_delimiter)
   .col-sm-4
-    / = render :partial => 'top_rat_kills'
+    = top_table(@public_top_kills, caption: 'Top 5 Total Rat Kills', more: false, subject_field: '_id', value_display: :number_with_delimiter)

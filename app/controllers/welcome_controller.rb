@@ -20,7 +20,7 @@ class WelcomeController < ApplicationController
   def index; end
 
   def ticks
-    @top_ticks = WalletRecord.public_top_ticks.page(params[:page]).per(DEFAULT_PER_PAGE)
+    @top_ticks = WalletRecord.public_top_ticks.top_ticks.page(params[:page]).per(DEFAULT_PER_PAGE)
   end
 
   def average_ticks
@@ -46,7 +46,7 @@ class WelcomeController < ApplicationController
   end
 
   def top_ticks
-    @top_ticks = WalletRecord.public_top_ticks.limit(5)
+    @top_ticks = WalletRecord.public_top_ticks.top_ticks.limit(5)
   end
 
   def top_average_ticks

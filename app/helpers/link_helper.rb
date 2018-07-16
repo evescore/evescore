@@ -23,10 +23,12 @@ module LinkHelper
   end
 
   def corporation_link(corporation, options = {})
+    corporation = Corporation.find(corporation) unless corporation.is_a?(Corporation)
     link_to corporation.name, corporation_path(corporation), options
   end
 
   def corporation_image_link(corporation, size = 32, options = {})
+    corporation = Corporation.find(corporation) unless corporation.is_a?(Corporation)
     link_to corporation_image(corporation.id, size, options), corporation_path(corporation)
   end
 
