@@ -2,18 +2,24 @@
 
 module TableHelper
   def top_table(object, options)
-    locals = {
-      caption: options[:caption],
-      more: options[:more],
-      subject: options[:subject].capitalize,
-      value: options[:value].capitalize,
-      subject_image_link: (options[:subject].to_s + '_image_link').to_sym,
-      subject_field: options[:subject_field],
-      value_field: options[:value_field],
-      subject_link: (options[:subject].to_s + '_link').to_sym,
-      value_display: options[:value_display]
+    render partial: 'shared/top_table', object: object, locals: top_table_locals(options)
+  end
+
+  def top_table_locals(options)
+    {
+      caption: options[:caption], more: options[:more], subject: options[:subject].capitalize,
+      value: options[:value].capitalize, subject_image_link: top_table_image_link(options[:subject]),
+      subject_field: options[:subject_field], value_field: options[:value_field],
+      subject_link: top_table_link(options[:subject]), value_display: options[:value_display]
     }
-    render partial: 'shared/top_table', object: object, locals: locals
+  end
+
+  def top_table_link(symbol)
+    (symbol.to_s + '_link').to_sym
+  end
+
+  def top_table_image_link(symbol)
+    (symbol.to_s + '_image_link').to_sym
   end
 
   def top_table_caption(caption, more = false)
@@ -32,7 +38,7 @@ module TableHelper
 
   def top_table_row(record, options = {})
     size = options[:size] || 32
-    icon = content_tag(:td, send(options[:subject_image_link], record[options[:subject_field]], size))
+    spo icon = content_tag(:td, send(options[:subject_image_link], record[options[:subject_field]], size))
     subject = content_tag(:td, send(options[:subject_link], record[options[:subject_field]]))
     value = content_tag(:td, send(options[:value_display], record[options[:value_field]]), class: 'numeric')
     content_tag(:tr, icon + subject + value)

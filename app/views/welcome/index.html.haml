@@ -1,17 +1,13 @@
 .row
   .col-sm-4
-    / = render :partial => 'top_isk', locals: { caption: 'Top 5 Total ISK Earned', more: true, subject: 'Character', value: 'Amount'}
-    / = render :partial => 'shared/top_table', object: @top_isk, locals: { caption: 'Top 5 Total ISK Earned', more: true, subject: 'Character', value: 'Amount', subject_image_link: :character_image_link, subject_field: '_id', value_field: 'amount', subject_link: :character_link, value_display: :number_to_isk_short}
     = top_table(@top_isk, caption: 'Top 5 Total ISK Earned', more: isk_path, subject: :character, value: :amount, subject_field: '_id', value_field: 'amount', value_display: :number_to_isk_short)
   .col-sm-4
     = top_table(@top_ticks, caption: 'Top 5 Ticks', more: global_ticks_path, subject: :character, value: :amount, subject_field: 'character_id', value_field: 'amount', value_display: :number_to_isk_short)
-    / = render :partial => 'top_ticks', locals: { caption: 'Top 5 Ticks', more: true, subject: 'Character', value: 'Amount' }
   .col-sm-4
     = top_table(@top_average_ticks, caption: 'Top 5 Average Ticks', more: global_ticks_path, subject: :character, value: :amount, subject_field: '_id', value_field: 'amount', value_display: :number_to_isk_short)
-    / = render :partial => 'top_average_ticks', locals: { caption: 'Top 5 Average Ticks', more: true, subject: 'Character', value: 'Amount' }
 .row
   .col-sm-4
-    / = render :partial => 'global_summary'
+    = render :partial => 'global_summary'
   .col-sm-4
     / = render :partial => 'top_isk_corporations', locals: { caption: 'Top 5 Total ISK Earned (Corporations)', more: true }
   .col-sm-4
