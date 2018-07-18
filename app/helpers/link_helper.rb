@@ -4,6 +4,14 @@ module LinkHelper
   def breadcrumbs(*crumbs)
     render partial: 'shared/breadcrumbs', locals: { crumbs: crumbs }
   end
+  
+  def group_link(group)
+    if group.faction
+      link_to group.name, group_path(group.faction, group)
+    else
+      link_to group.name, generic_group_path(group)
+    end
+  end
 
   def character_link(character, options = {})
     character = Character.find(character) unless character.is_a?(Character)
