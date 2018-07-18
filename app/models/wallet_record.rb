@@ -24,6 +24,7 @@ class WalletRecord
   scope :mission_rewards, -> { where(type: 'agent_mission_reward') }
   scope :mission_time_bonus, -> { where(type: 'agent_mission_time_bonus_reward') }
   scope :top_ticks, -> { where(:type.ne => 'bounty_prize').order('amount desc') }
+  scope :ticks, -> { where(:type.ne => 'bounty_prize') }
 
   before_save :assign_corporation
 
@@ -118,7 +119,7 @@ class WalletRecord
   end
 
   def self.public_top_average_ticks(limit = nil)
-    query = public_records.group(_id: '$character_id', :amount.avg => '$amount').desc(:amount)
+    query = ticks.public_records.group(_id: '$character_id', :amount.avg => '$amount').desc(:amount)
     aggregate_public_top_pipeline(query, limit)
   end
 end

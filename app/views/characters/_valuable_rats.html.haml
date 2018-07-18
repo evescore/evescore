@@ -1,7 +1,9 @@
 %table.table.table-striped
   %caption
     Top 5 Rats Bounty
-    %span.pull-right= link_to 'More', character_rats_path(@character)
+    - more || false
+    - if more
+      %span.pull-right= link_to 'More', character_rats_path(@character)
   %thead
     %tr
       %th.icon
@@ -11,5 +13,5 @@
     - @valuable_rats.each do |record|
       %tr
         %td= kill_image(record)
-        %td= record['name']
+        %td= link_to record['name'], rats_path(record['rat_id'])
         %td.numeric= number_to_isk_short record['bounty']
