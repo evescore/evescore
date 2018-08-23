@@ -8,7 +8,7 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
-  - npm install -g yarn@1.5.1
+  - npm install -g yarn@1.7.0
   - bundle exec rake yarn:install
   - bundle exec rake import:dogma_attribute_types
   - bundle exec rake import:groups
